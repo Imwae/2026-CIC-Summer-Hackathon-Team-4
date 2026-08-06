@@ -1,5 +1,7 @@
 import { useReducer } from 'react'
 import Breakdown from './components/Breakdown'
+import Suggestions from './components/Suggestions'
+import { getSuggestions } from './api'
 import './App.css'
 
 // --- Phase Constants ---
@@ -222,11 +224,20 @@ function App() {
     // Actual API call will be wired in api.js integration task
   }
 
-  // Handler: transition to suggesting phase
-  const handleGetSuggestions = () => {
+  // Handler: transition to suggesting phase and call API
+  const handleGetSuggestions = async () => {
     dispatch({ type: Actions.SET_PHASE, payload: PHASES.SUGGESTING })
     dispatch({ type: Actions.SET_LOADING, payload: true })
-    // Actual API call will be wired in api.js integration task
+    try {
+      const result = await getSuggestions({
+        analysisResult: state.analysisResult,
+        commitments: state.commitments,
+      })
+      dispatch({ type: Actions.SET_SUGGESTIONS, payload: result })
+    } catch (err) {
+      dispatch({ type: Actions.SET_ERROR, payload: err.message })
+      dispatch({ type: Actions.SET_PHASE, payload: PHASES.RESULTS })
+    }
   }
 
   return (
@@ -283,7 +294,7 @@ function App() {
           </section>
         )}
 
-        {/* Results phase: timeline + breakdown + optional suggestions trigger */}
+        {/* Results phase: timeline + breakdown + suggestions */}
         {state.appPhase === PHASES.RESULTS && (
           <section className="phase-results">
             {/* Placeholder for Timeline component */}
@@ -294,23 +305,14 @@ function App() {
             {/* Breakdown component — pie chart of commitment proportions */}
             <Breakdown commitments={state.commitments} />
 
-            {/* Get Suggestions button — shown when over-capacity weeks exist */}
-            {state.analysisResult && (
-              <button
-                type="button"
-                className="btn-secondary"
-                onClick={handleGetSuggestions}
-              >
-                Get Suggestions
-              </button>
-            )}
-
-            {/* Placeholder for Suggestions component */}
-            {state.suggestions && (
-              <div className="placeholder" data-component="Suggestions">
-                <p>Suggestions (placeholder)</p>
-              </div>
-            )}
+            {/* Suggestions component — shows button when over-capacity, then renders cards */}
+            <Suggestions
+              suggestions={state.suggestions}
+              commitments={state.commitments}
+              analysisResult={state.analysisResult}
+              onGetSuggestions={handleGetSuggestions}
+              loading={state.loading}
+            />
           </section>
         )}
 

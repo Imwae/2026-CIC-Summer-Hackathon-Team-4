@@ -205,11 +205,11 @@
 **Depends on:** Task 7
 
 ### Subtasks:
-- [ ] Display locked acknowledgment section (what constraints are protected)
-- [ ] Render suggestion cards (one per suggestion) showing: description, target commitment, action type, detail, affected weeks
-- [ ] Add "Get Suggestions" button that appears only when over-capacity weeks exist
-- [ ] Show loading state while suggestions are being generated
-- [ ] Integrate with `api.js` suggest endpoint
+- [x] Display locked acknowledgment section (what constraints are protected)
+- [x] Render suggestion cards (one per suggestion) showing: description, target commitment, action type, detail, affected weeks
+- [x] Add "Get Suggestions" button that appears only when over-capacity weeks exist
+- [x] Show loading state while suggestions are being generated
+- [x] Integrate with `api.js` suggest endpoint
 
 **Acceptance Criterion:** When over-capacity weeks exist, a "Get Suggestions" button appears. Clicking it shows a loading state, then renders suggestion cards referencing specific commitments. Locked constraints are explicitly acknowledged.
 
