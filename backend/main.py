@@ -8,28 +8,52 @@ from fastapi import FastAPI, File, Form, Request, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, JSONResponse
 
-from backend.bedrock_client import (
-    analyze_capacity,
-    extract_syllabus,
-    generate_suggestions,
-    parse_commitments,
-    BedrockClientError,
-    BedrockTimeoutError,
-    BedrockParseError,
-)
-from backend.capacity import compute_capacity
-from backend.extractor import extract_text_from_pdf
-from backend.models import (
-    AnalysisRequest,
-    AnalysisResponse,
-    CommitmentParseRequest,
-    CommitmentParseResponse,
-    ExtractionRequest,
-    ExtractionResponse,
-    ErrorResponse,
-    SuggestionRequest,
-    SuggestionResponse,
-)
+try:
+    from backend.bedrock_client import (
+        analyze_capacity,
+        extract_syllabus,
+        generate_suggestions,
+        parse_commitments,
+        BedrockClientError,
+        BedrockTimeoutError,
+        BedrockParseError,
+    )
+    from backend.capacity import compute_capacity
+    from backend.extractor import extract_text_from_pdf
+    from backend.models import (
+        AnalysisRequest,
+        AnalysisResponse,
+        CommitmentParseRequest,
+        CommitmentParseResponse,
+        ExtractionRequest,
+        ExtractionResponse,
+        ErrorResponse,
+        SuggestionRequest,
+        SuggestionResponse,
+    )
+except ImportError:
+    from bedrock_client import (
+        analyze_capacity,
+        extract_syllabus,
+        generate_suggestions,
+        parse_commitments,
+        BedrockClientError,
+        BedrockTimeoutError,
+        BedrockParseError,
+    )
+    from capacity import compute_capacity
+    from extractor import extract_text_from_pdf
+    from models import (
+        AnalysisRequest,
+        AnalysisResponse,
+        CommitmentParseRequest,
+        CommitmentParseResponse,
+        ExtractionRequest,
+        ExtractionResponse,
+        ErrorResponse,
+        SuggestionRequest,
+        SuggestionResponse,
+    )
 
 logger = logging.getLogger(__name__)
 

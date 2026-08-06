@@ -12,17 +12,30 @@ import boto3
 from botocore.exceptions import ClientError, ReadTimeoutError
 from pydantic import ValidationError
 
-from backend.models import (
-    CommitmentParseResponse,
-    ExtractionResponse,
-    SuggestionResponse,
-)
-from backend.prompts import (
-    ANALYSIS_PROMPT,
-    COMMITMENT_PARSE_PROMPT,
-    EXTRACTION_PROMPT,
-    SUGGESTION_PROMPT,
-)
+try:
+    from backend.models import (
+        CommitmentParseResponse,
+        ExtractionResponse,
+        SuggestionResponse,
+    )
+    from backend.prompts import (
+        ANALYSIS_PROMPT,
+        COMMITMENT_PARSE_PROMPT,
+        EXTRACTION_PROMPT,
+        SUGGESTION_PROMPT,
+    )
+except ImportError:
+    from models import (
+        CommitmentParseResponse,
+        ExtractionResponse,
+        SuggestionResponse,
+    )
+    from prompts import (
+        ANALYSIS_PROMPT,
+        COMMITMENT_PARSE_PROMPT,
+        EXTRACTION_PROMPT,
+        SUGGESTION_PROMPT,
+    )
 
 
 # ---------------------------------------------------------------------------
