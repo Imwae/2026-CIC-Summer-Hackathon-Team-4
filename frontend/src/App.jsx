@@ -327,7 +327,7 @@ function App() {
           </section>
         )}
 
-        {/* Results phase: timeline + breakdown + suggestions */}
+        {/* Results phase: timeline + breakdown + verdict + suggestions */}
         {state.appPhase === PHASES.RESULTS && (
           <section className="phase-results">
             {/* Placeholder for Timeline component */}
@@ -337,6 +337,50 @@ function App() {
 
             {/* Breakdown component — pie chart of commitment proportions */}
             <Breakdown commitments={state.commitments} />
+
+            {/* AI Feasibility Verdict */}
+            {state.analysisResult && state.analysisResult.verdict && (
+              <div style={{
+                padding: '1.5rem',
+                borderRadius: '12px',
+                border: `2px solid ${
+                  state.analysisResult.feasibility_level === 'feasible' ? '#86efac' :
+                  state.analysisResult.feasibility_level === 'tight' ? '#fde68a' : '#fca5a5'
+                }`,
+                backgroundColor: state.analysisResult.feasibility_level === 'feasible' ? '#f0fdf4' :
+                  state.analysisResult.feasibility_level === 'tight' ? '#fffbeb' : '#fef2f2',
+                marginBottom: '1.5rem',
+              }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1rem' }}>
+                  <span style={{ fontSize: '1.5rem' }} role="img" aria-hidden="true">
+                    {state.analysisResult.feasibility_level === 'feasible' ? '✅' :
+                     state.analysisResult.feasibility_level === 'tight' ? '⚠️' : '🚨'}
+                  </span>
+                  <h3 style={{ margin: 0, fontSize: '1.2rem', fontWeight: 600, color: '#1f2937' }}>
+                    AI Feasibility Assessment
+                  </h3>
+                  <span style={{
+                    marginLeft: 'auto',
+                    padding: '0.25rem 0.75rem',
+                    borderRadius: '9999px',
+                    fontSize: '0.75rem',
+                    fontWeight: 600,
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.05em',
+                    backgroundColor: state.analysisResult.feasibility_level === 'feasible' ? '#dcfce7' :
+                      state.analysisResult.feasibility_level === 'tight' ? '#fef3c7' : '#fee2e2',
+                    color: state.analysisResult.feasibility_level === 'feasible' ? '#166534' :
+                      state.analysisResult.feasibility_level === 'tight' ? '#92400e' : '#991b1b',
+                  }}>
+                    {state.analysisResult.feasibility_level === 'not_feasible' ? 'Not Feasible' :
+                     state.analysisResult.feasibility_level.charAt(0).toUpperCase() + state.analysisResult.feasibility_level.slice(1)}
+                  </span>
+                </div>
+                <p style={{ margin: 0, lineHeight: 1.6, color: '#374151', fontSize: '0.95rem', whiteSpace: 'pre-wrap' }}>
+                  {state.analysisResult.verdict}
+                </p>
+              </div>
+            )}
 
             {/* Suggestions component — shows button when over-capacity, then renders cards */}
             <Suggestions
