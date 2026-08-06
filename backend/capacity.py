@@ -15,13 +15,15 @@ from typing import Dict, List, Set, Union
 # the type hint below uses a string forward reference.
 # At runtime the function receives CourseInput instances.
 try:
-    from models import CourseInput, AnalysisResponse, WeekResult
+    from backend.models import CourseInput, AnalysisResponse, WeekResult
 except ImportError:
-    # Fallback when running the self-test directly from the backend/ directory
-    # or when the module is imported before models is on sys.path.
-    CourseInput = None  # type: ignore
-    AnalysisResponse = None  # type: ignore
-    WeekResult = None  # type: ignore
+    try:
+        from models import CourseInput, AnalysisResponse, WeekResult
+    except ImportError:
+        # Fallback when running the self-test directly
+        CourseInput = None  # type: ignore
+        AnalysisResponse = None  # type: ignore
+        WeekResult = None  # type: ignore
 
 # ---------------------------------------------------------------------------
 # Module-level constants
