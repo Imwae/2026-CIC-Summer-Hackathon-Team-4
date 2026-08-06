@@ -173,6 +173,133 @@
         "chatSessionId": "sess_05a98602-2c9e-4f29-8f8a-0277cb9962c9",
         "timestamp": 1786042072097
       }
+    ],
+    "Define `EXTRACTION_PROMPT` template with placeholders for syllabus_text and schema": [
+      {
+        "executionId": "450d29ad-d513-46ee-a01b-62de29267b4d",
+        "chatSessionId": "sess_3ff7a10f-55df-4dcb-b31e-469a3da06389",
+        "timestamp": 1786042436244
+      },
+      {
+        "executionId": "450d29ad-d513-46ee-a01b-62de29267b4d",
+        "chatSessionId": "sess_3ff7a10f-55df-4dcb-b31e-469a3da06389",
+        "timestamp": 1786042534763
+      }
+    ],
+    "Define `ANALYSIS_PROMPT` template with placeholders for capacity_json": [
+      {
+        "executionId": "c0b03213-e544-4d54-9718-b25a61d24723",
+        "chatSessionId": "sess_fa44bd6f-0223-41d5-8b12-d629e6d2c209",
+        "timestamp": 1786042552294
+      },
+      {
+        "executionId": "c0b03213-e544-4d54-9718-b25a61d24723",
+        "chatSessionId": "sess_fa44bd6f-0223-41d5-8b12-d629e6d2c209",
+        "timestamp": 1786042610488
+      }
+    ],
+    "Define `SUGGESTION_PROMPT` template with placeholders for locked_list, over_capacity_weeks_data, unlocked_list, schema": [
+      {
+        "executionId": "2e5be9fb-ebf6-4ae1-9ee0-de60b52c6f56",
+        "chatSessionId": "sess_8cdafbc0-4c57-402e-9528-55f377e54d7c",
+        "timestamp": 1786042628725
+      },
+      {
+        "executionId": "2e5be9fb-ebf6-4ae1-9ee0-de60b52c6f56",
+        "chatSessionId": "sess_8cdafbc0-4c57-402e-9528-55f377e54d7c",
+        "timestamp": 1786042690213
+      }
+    ],
+    "Define `COMMITMENT_PARSE_PROMPT` template with placeholders for free_text and schema": [
+      {
+        "executionId": "ff6d8d80-0371-481b-91e2-e7f7a737eda0",
+        "chatSessionId": "sess_10dd978f-dad3-4419-9bb4-a2c9fabbe4c4",
+        "timestamp": 1786042709237
+      },
+      {
+        "executionId": "ff6d8d80-0371-481b-91e2-e7f7a737eda0",
+        "chatSessionId": "sess_10dd978f-dad3-4419-9bb4-a2c9fabbe4c4",
+        "timestamp": 1786042782479
+      }
+    ],
+    "Create boto3 Bedrock runtime client (sole boto3 importer in the project)": [
+      {
+        "executionId": "f5af184b-2647-4c14-8503-c200957cb572",
+        "chatSessionId": "sess_d942f9bc-f2f4-4326-b1ff-c0230f81ff59",
+        "timestamp": 1786042831416
+      },
+      {
+        "executionId": "f5af184b-2647-4c14-8503-c200957cb572",
+        "chatSessionId": "sess_d942f9bc-f2f4-4326-b1ff-c0230f81ff59",
+        "timestamp": 1786042922874
+      }
+    ],
+    "Implement `extract_syllabus(text: str) -> ExtractionResponse` — calls Bedrock with extraction prompt, parses JSON response": [
+      {
+        "executionId": "5b9a5016-8679-4abf-b8ac-125b8ec55755",
+        "chatSessionId": "sess_1ec5eebe-1d5f-4631-bad9-59fe34136e36",
+        "timestamp": 1786042941439
+      },
+      {
+        "executionId": "5b9a5016-8679-4abf-b8ac-125b8ec55755",
+        "chatSessionId": "sess_1ec5eebe-1d5f-4631-bad9-59fe34136e36",
+        "timestamp": 1786043012023
+      }
+    ],
+    "Implement `analyze_capacity(capacity_data: dict) -> str` — calls Bedrock with analysis prompt, returns narrative verdict": [
+      {
+        "executionId": "b9d63f3f-7b63-4194-933e-f40fb0f6aab2",
+        "chatSessionId": "sess_1436dbec-7ee2-4aba-9286-7ebc2094981f",
+        "timestamp": 1786043025840
+      },
+      {
+        "executionId": "b9d63f3f-7b63-4194-933e-f40fb0f6aab2",
+        "chatSessionId": "sess_1436dbec-7ee2-4aba-9286-7ebc2094981f",
+        "timestamp": 1786043111152
+      }
+    ],
+    "Implement `generate_suggestions(analysis_result: dict, commitments: list) -> SuggestionResponse` — calls Bedrock with suggestion prompt": [
+      {
+        "executionId": "367d4119-600c-4ba8-9c8c-6da5a47bfe45",
+        "chatSessionId": "sess_fedb4ffd-0f36-432b-89e3-5284444e62f8",
+        "timestamp": 1786043123716
+      },
+      {
+        "executionId": "367d4119-600c-4ba8-9c8c-6da5a47bfe45",
+        "chatSessionId": "sess_fedb4ffd-0f36-432b-89e3-5284444e62f8",
+        "timestamp": 1786043429200
+      }
+    ],
+    "Implement `parse_commitments(text: str) -> CommitmentParseResponse` — calls Bedrock with commitment parse prompt": [
+      {
+        "executionId": "a76d1333-8886-4da0-af21-9a165785cbe1",
+        "chatSessionId": "sess_60efeadd-9138-4883-97fe-fb054577cca2",
+        "timestamp": 1786043442878
+      }
+    ],
+    "Implement retry logic: on JSON parse failure, strip markdown fences and retry parse once": [
+      {
+        "executionId": "2b5739b5-6166-4dea-9a3a-6cd4dbdf904c",
+        "chatSessionId": "sess_2543295e-a214-43c4-83ba-a977ea3c34d4",
+        "timestamp": 1786043610935
+      },
+      {
+        "executionId": "2b5739b5-6166-4dea-9a3a-6cd4dbdf904c",
+        "chatSessionId": "sess_2543295e-a214-43c4-83ba-a977ea3c34d4",
+        "timestamp": 1786043626602
+      }
+    ],
+    "Implement error handling: catch ClientError, timeout, JSON errors → raise descriptive exceptions (never raw stack traces)": [
+      {
+        "executionId": "c0f3e67c-eb59-4dbc-a733-96a15c4d89cd",
+        "chatSessionId": "sess_f9611cfe-0ef5-4a6c-baf0-c0ec54c090b0",
+        "timestamp": 1786043640321
+      },
+      {
+        "executionId": "c0f3e67c-eb59-4dbc-a733-96a15c4d89cd",
+        "chatSessionId": "sess_f9611cfe-0ef5-4a6c-baf0-c0ec54c090b0",
+        "timestamp": 1786043812142
+      }
     ]
   }
 }

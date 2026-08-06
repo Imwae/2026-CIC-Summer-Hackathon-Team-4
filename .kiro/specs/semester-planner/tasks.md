@@ -50,13 +50,13 @@
 **Depends on:** Task 1, Task 2
 
 ### Subtasks:
-- [ ] Create boto3 Bedrock runtime client (sole boto3 importer in the project)
-- [ ] Implement `extract_syllabus(text: str) -> ExtractionResponse` — calls Bedrock with extraction prompt, parses JSON response
-- [ ] Implement `analyze_capacity(capacity_data: dict) -> str` — calls Bedrock with analysis prompt, returns narrative verdict
-- [ ] Implement `generate_suggestions(analysis_result: dict, commitments: list) -> SuggestionResponse` — calls Bedrock with suggestion prompt
-- [ ] Implement `parse_commitments(text: str) -> CommitmentParseResponse` — calls Bedrock with commitment parse prompt
-- [ ] Implement retry logic: on JSON parse failure, strip markdown fences and retry parse once
-- [ ] Implement error handling: catch ClientError, timeout, JSON errors → raise descriptive exceptions (never raw stack traces)
+- [x] Create boto3 Bedrock runtime client (sole boto3 importer in the project)
+- [x] Implement `extract_syllabus(text: str) -> ExtractionResponse` — calls Bedrock with extraction prompt, parses JSON response
+- [x] Implement `analyze_capacity(capacity_data: dict) -> str` — calls Bedrock with analysis prompt, returns narrative verdict
+- [x] Implement `generate_suggestions(analysis_result: dict, commitments: list) -> SuggestionResponse` — calls Bedrock with suggestion prompt
+- [x] Implement `parse_commitments(text: str) -> CommitmentParseResponse` — calls Bedrock with commitment parse prompt
+- [x] Implement retry logic: on JSON parse failure, strip markdown fences and retry parse once
+- [x] Implement error handling: catch ClientError, timeout, JSON errors → raise descriptive exceptions (never raw stack traces)
 
 **Acceptance Criterion:** Each function calls Bedrock, returns a validated Pydantic model on success, and raises a human-readable exception on failure. No AWS credentials are hardcoded.
 
