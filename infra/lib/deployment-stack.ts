@@ -5,35 +5,31 @@ import * as s3 from 'aws-cdk-lib/aws-s3';
 import * as s3deploy from 'aws-cdk-lib/aws-s3-deployment';
 import * as cloudfront from 'aws-cdk-lib/aws-cloudfront';
 import * as origins from 'aws-cdk-lib/aws-cloudfront-origins';
-import { HttpApi } from '@aws-cdk/aws-apigatewayv2-alpha';
-import { HttpLambdaIntegration } from '@aws-cdk/aws-apigatewayv2-integrations-alpha';
+import * as apigwv2 from 'aws-cdk-lib/aws-apigatewayv2';
+import * as apigwv2integrations from 'aws-cdk-lib/aws-apigatewayv2-integrations';
 import { Construct } from 'constructs';
 import * as path from 'path';
 
 export class DeploymentStack extends cdk.Stack {
   public readonly backendFunction: lambda.Function;
-  public readonly httpApi: HttpApi;
+  public readonly httpApi: apigwv2.HttpApi;
   public readonly frontendBucket: s3.Bucket;
   public readonly distribution: cloudfront.Distribution;
 
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
-    // Backend Lambda Function
+    // Lambda function — uses pre-installed dependencies in backend/
+    // Run "pip install -r requirements.txt -t ." in the backend/ dir before deploying
     this.backendFunction = new lambda.Function(this, 'BackendFunction', {
       runtime: lambda.Runtime.PYTHON_3_12,
       handler: 'handler.handler',
-      code: lambda.Code.fromAsset(path.join(__dirname, '../../backend'), {
-        bundling: {
-          image: lambda.Runtime.PYTHON_3_12.bundlingImage,
-          command: [
-            'bash', '-c',
-            'pip install -r requirements.txt -t /asset-output && cp -au . /asset-output',
-          ],
-        },
-      }),
+      code: lambda.Code.fromAsset(path.join(__dirname, '../../backend')),
       memorySize: 512,
       timeout: cdk.Duration.seconds(30),
+      environment: {
+        BEDROCK_MODEL_ID: 'us.anthropic.claude-sonnet-4-20250514-v1:0',
+      },
     });
 
     // Grant Bedrock InvokeModel permission
@@ -45,9 +41,9 @@ export class DeploymentStack extends cdk.Stack {
     );
 
     // ─── HTTP API Gateway ──────────────────────────────────────────────
-    const lambdaIntegration = new HttpLambdaIntegration('LambdaIntegration', this.backendFunction);
+    const lambdaIntegration = new apigwv2integrations.HttpLambdaIntegration('LambdaIntegration', this.backendFunction);
 
-    this.httpApi = new HttpApi(this, 'HttpApi', {
+    this.httpApi = new apigwv2.HttpApi(this, 'HttpApi', {
       defaultIntegration: lambdaIntegration,
     });
 

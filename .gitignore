@@ -1,0 +1,4 @@
+infra/node_modules/
+backend/boto3*
+backend/botocore*
+backend/*.dist-info/
