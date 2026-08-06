@@ -164,13 +164,13 @@
 **Depends on:** Task 7
 
 ### Subtasks:
-- [ ] Create structured form with labeled number inputs: work hours, commute hours, sleep hours/night, extracurricular hours, leisure hours
-- [ ] Add "Add Custom Commitment" button for user-defined entries
-- [ ] Add lock toggle per commitment (checkbox or icon button) — locked items visually distinguished
-- [ ] Create free-text alternative input (textarea + "Parse" button)
-- [ ] On parse success, display parsed commitments for confirmation/editing before accepting
-- [ ] Create break week selector (checkboxes or multi-select for weeks 1–15)
-- [ ] Integrate with `api.js` commitments/parse endpoint
+- [x] Create structured form with labeled number inputs: work hours, commute hours, sleep hours/night, extracurricular hours, leisure hours
+- [x] Add "Add Custom Commitment" button for user-defined entries
+- [x] Add lock toggle per commitment (checkbox or icon button) — locked items visually distinguished
+- [x] Create free-text alternative input (textarea + "Parse" button)
+- [x] On parse success, display parsed commitments for confirmation/editing before accepting
+- [x] Create break week selector (checkboxes or multi-select for weeks 1–15)
+- [x] Integrate with `api.js` commitments/parse endpoint
 
 **Acceptance Criterion:** A user can enter commitments via form fields and mark them as locked. Locked items show a visual indicator. Free-text input triggers parsing and shows results for confirmation. Break weeks can be selected.
 
