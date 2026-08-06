@@ -7,20 +7,20 @@
 **Stories:** All (shared contract)
 
 ### Subtasks:
-- [ ] Create `Deliverable` model (name, type, due_date, week_number, weight_percent, estimated_prep_weeks, estimated_hours_total)
-- [ ] Create `ExtractionRequest` model (course_text, file_name)
-- [ ] Create `ExtractionResponse` model (status, course_code, course_name, deliverables[], error_message)
-- [ ] Create `Commitment` model (name, category, hours_per_week, locked)
-- [ ] Create `CommitmentParseRequest` model (text)
-- [ ] Create `CommitmentParseResponse` model (commitments[])
-- [ ] Create `CourseInput` model (course_code, course_name, deliverables[])
-- [ ] Create `AnalysisRequest` model (courses[], commitments[], break_weeks[], semester_start, semester_end)
-- [ ] Create `WeekResult` model (week_number, start_date, is_break, hours_required, hours_available, over_capacity, collision, deliverables_due[], prep_hours_by_course{})
-- [ ] Create `AnalysisResponse` model (feasible, feasibility_level, total_weeks, weeks[], critical_weeks[], collision_weeks[], recovery_floor_breached, verdict)
-- [ ] Create `Suggestion` model (description, target_commitment, action, detail, affected_weeks[])
-- [ ] Create `SuggestionRequest` model (analysis_result, commitments[])
-- [ ] Create `SuggestionResponse` model (suggestions[], locked_acknowledgment)
-- [ ] Create `ErrorResponse` model (error, message, code)
+- [x] Create `Deliverable` model (name, type, due_date, week_number, weight_percent, estimated_prep_weeks, estimated_hours_total)
+- [x] Create `ExtractionRequest` model (course_text, file_name)
+- [x] Create `ExtractionResponse` model (status, course_code, course_name, deliverables[], error_message)
+- [x] Create `Commitment` model (name, category, hours_per_week, locked)
+- [x] Create `CommitmentParseRequest` model (text)
+- [x] Create `CommitmentParseResponse` model (commitments[])
+- [x] Create `CourseInput` model (course_code, course_name, deliverables[])
+- [x] Create `AnalysisRequest` model (courses[], commitments[], break_weeks[], semester_start, semester_end)
+- [x] Create `WeekResult` model (week_number, start_date, is_break, hours_required, hours_available, over_capacity, collision, deliverables_due[], prep_hours_by_course{})
+- [x] Create `AnalysisResponse` model (feasible, feasibility_level, total_weeks, weeks[], critical_weeks[], collision_weeks[], recovery_floor_breached, verdict)
+- [x] Create `Suggestion` model (description, target_commitment, action, detail, affected_weeks[])
+- [x] Create `SuggestionRequest` model (analysis_result, commitments[])
+- [x] Create `SuggestionResponse` model (suggestions[], locked_acknowledgment)
+- [x] Create `ErrorResponse` model (error, message, code)
 
 **Acceptance Criterion:** Importing `backend.models` succeeds and all models can be instantiated with sample data matching the API contract in the design doc.
 
@@ -279,7 +279,9 @@ Task 1 (models.py) ────────────────────�
 | Developer | Tasks | Focus Area |
 |-----------|-------|------------|
 | Dev A (Backend) | 1 → 2 → 3 → 6 | Schemas, prompts, Bedrock client, API routes |
-| Dev B (Backend) | 4 → 5 → 12 → 13 | PDF extraction, capacity logic, fixtures, integration |
-| Dev C (Frontend) | 7 → 8 → 9 → 10 → 11 | React scaffold, all components |
+| Dev B (Backend + Charts) | 5 → 4 → 10 → 13 | Capacity logic, PDF extraction, Timeline/Breakdown charts, integration |
+| Dev C (Frontend) | 7 → 8 → 9 → 11 | React scaffold, SyllabusUpload, CommitmentForm, Suggestions |
+
+Dev B takes the visualization components (Task 10) because they finish `capacity.py` around midday and know the AnalysisResponse data shape best. Charts are self-contained — they take an AnalysisResponse and render it, no coupling to the rest of the UI.
 
 Dev A and Dev C can start in parallel once Task 1 is committed (the shared contract).

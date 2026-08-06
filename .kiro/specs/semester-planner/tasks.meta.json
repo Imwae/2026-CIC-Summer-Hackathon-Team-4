@@ -1,0 +1,178 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "Create `Deliverable` model (name, type, due_date, week_number, weight_percent, estimated_prep_weeks, estimated_hours_total)": [
+      {
+        "executionId": "d5a744c2-770b-41fe-8919-e5b5bb50e3d2",
+        "chatSessionId": "sess_7e434143-3064-41d0-9fd6-91260ddca25d",
+        "timestamp": 1786039819708
+      },
+      {
+        "executionId": "d5a744c2-770b-41fe-8919-e5b5bb50e3d2",
+        "chatSessionId": "sess_7e434143-3064-41d0-9fd6-91260ddca25d",
+        "timestamp": 1786040072944
+      }
+    ],
+    "Create `ExtractionRequest` model (course_text, file_name)": [
+      {
+        "executionId": "634aac52-97d5-480a-bc51-6b2860e10912",
+        "chatSessionId": "sess_a04bd32b-8b55-47cf-ac52-7ad29e29852a",
+        "timestamp": 1786040103244
+      },
+      {
+        "executionId": "634aac52-97d5-480a-bc51-6b2860e10912",
+        "chatSessionId": "sess_a04bd32b-8b55-47cf-ac52-7ad29e29852a",
+        "timestamp": 1786040195498
+      }
+    ],
+    "Create `ExtractionResponse` model (status, course_code, course_name, deliverables[], error_message)": [
+      {
+        "executionId": "bf2edaec-3011-48cb-9861-ccfd845a3601",
+        "chatSessionId": "sess_c128a9bf-e462-4a87-ae50-9638526557d5",
+        "timestamp": 1786040214495
+      },
+      {
+        "executionId": "bf2edaec-3011-48cb-9861-ccfd845a3601",
+        "chatSessionId": "sess_c128a9bf-e462-4a87-ae50-9638526557d5",
+        "timestamp": 1786040306001
+      }
+    ],
+    "Create `Commitment` model (name, category, hours_per_week, locked)": [
+      {
+        "executionId": "7e8869ef-6ca7-4d78-81de-96ad8e666494",
+        "chatSessionId": "sess_20cb5056-a985-4ad5-9306-4fec509fd529",
+        "timestamp": 1786040329876
+      },
+      {
+        "executionId": "7e8869ef-6ca7-4d78-81de-96ad8e666494",
+        "chatSessionId": "sess_20cb5056-a985-4ad5-9306-4fec509fd529",
+        "timestamp": 1786040426823
+      }
+    ],
+    "Create `CommitmentParseRequest` model (text)": [
+      {
+        "executionId": "91730347-0797-4bd8-8dde-5e022a6230b0",
+        "chatSessionId": "sess_1ae1f15c-7159-4476-a90a-f9b155b43ca3",
+        "timestamp": 1786040451111
+      },
+      {
+        "executionId": "8a54b6c4-2e0b-4b72-bcc3-9e595f4406be",
+        "chatSessionId": "sess_58be5479-816c-4e5b-929c-73b640365c5e",
+        "timestamp": 1786042159629
+      },
+      {
+        "executionId": "8a54b6c4-2e0b-4b72-bcc3-9e595f4406be",
+        "chatSessionId": "sess_58be5479-816c-4e5b-929c-73b640365c5e",
+        "timestamp": 1786042189984
+      }
+    ],
+    "Create `CommitmentParseResponse` model (commitments[])": [
+      {
+        "executionId": "be409221-4d75-44cd-b25a-3972ff798c7d",
+        "chatSessionId": "sess_5ba4b7fe-bea0-4b5e-8491-232bd8891afd",
+        "timestamp": 1786040526469
+      },
+      {
+        "executionId": "be409221-4d75-44cd-b25a-3972ff798c7d",
+        "chatSessionId": "sess_5ba4b7fe-bea0-4b5e-8491-232bd8891afd",
+        "timestamp": 1786040639909
+      }
+    ],
+    "Create `CourseInput` model (course_code, course_name, deliverables[])": [
+      {
+        "executionId": "c4f2333c-f165-4fbb-aa93-959e420013a5",
+        "chatSessionId": "sess_c4ccccac-b270-496a-b414-4810e82b2d45",
+        "timestamp": 1786040652176
+      },
+      {
+        "executionId": "c4f2333c-f165-4fbb-aa93-959e420013a5",
+        "chatSessionId": "sess_c4ccccac-b270-496a-b414-4810e82b2d45",
+        "timestamp": 1786040861251
+      }
+    ],
+    "Create `AnalysisRequest` model (courses[], commitments[], break_weeks[], semester_start, semester_end)": [
+      {
+        "executionId": "07c7c6b8-382b-4ffd-bb0f-b2ab61178aec",
+        "chatSessionId": "sess_a9afba3f-ecb2-466b-bdc5-024738d81cd3",
+        "timestamp": 1786040886333
+      },
+      {
+        "executionId": "07c7c6b8-382b-4ffd-bb0f-b2ab61178aec",
+        "chatSessionId": "sess_a9afba3f-ecb2-466b-bdc5-024738d81cd3",
+        "timestamp": 1786041130850
+      }
+    ],
+    "Create `WeekResult` model (week_number, start_date, is_break, hours_required, hours_available, over_capacity, collision, deliverables_due[], prep_hours_by_course{})": [
+      {
+        "executionId": "13e70c2a-9c28-4ddd-9389-19bbafaf108f",
+        "chatSessionId": "sess_4426db05-a6ba-4974-acc5-4f7d0cce0484",
+        "timestamp": 1786041150677
+      },
+      {
+        "executionId": "13e70c2a-9c28-4ddd-9389-19bbafaf108f",
+        "chatSessionId": "sess_4426db05-a6ba-4974-acc5-4f7d0cce0484",
+        "timestamp": 1786041284144
+      }
+    ],
+    "Create `AnalysisResponse` model (feasible, feasibility_level, total_weeks, weeks[], critical_weeks[], collision_weeks[], recovery_floor_breached, verdict)": [
+      {
+        "executionId": "091aa0a3-16aa-4894-9b57-fe73b4a75222",
+        "chatSessionId": "sess_cfe49660-f4d4-470e-9109-ec56f42b4064",
+        "timestamp": 1786041307679
+      },
+      {
+        "executionId": "091aa0a3-16aa-4894-9b57-fe73b4a75222",
+        "chatSessionId": "sess_cfe49660-f4d4-470e-9109-ec56f42b4064",
+        "timestamp": 1786041535398
+      }
+    ],
+    "Create `Suggestion` model (description, target_commitment, action, detail, affected_weeks[])": [
+      {
+        "executionId": "127a5192-3ebd-4a4e-8031-375e3073ecc4",
+        "chatSessionId": "sess_c8f9815c-c07d-4794-a80a-9de9fc188bfd",
+        "timestamp": 1786041567990
+      },
+      {
+        "executionId": "127a5192-3ebd-4a4e-8031-375e3073ecc4",
+        "chatSessionId": "sess_c8f9815c-c07d-4794-a80a-9de9fc188bfd",
+        "timestamp": 1786041630448
+      }
+    ],
+    "Create `SuggestionRequest` model (analysis_result, commitments[])": [
+      {
+        "executionId": "753fe764-e8a0-44c2-a54c-db24aa52f905",
+        "chatSessionId": "sess_f9764324-9dc8-47d8-8a4a-e49b19ba41dc",
+        "timestamp": 1786041660600
+      },
+      {
+        "executionId": "753fe764-e8a0-44c2-a54c-db24aa52f905",
+        "chatSessionId": "sess_f9764324-9dc8-47d8-8a4a-e49b19ba41dc",
+        "timestamp": 1786041874219
+      }
+    ],
+    "Create `SuggestionResponse` model (suggestions[], locked_acknowledgment)": [
+      {
+        "executionId": "f16ca5f1-af7f-4c82-90e9-86834f7f5bc7",
+        "chatSessionId": "sess_b8b2a659-198f-4f49-b4bc-efb15b961f67",
+        "timestamp": 1786041895419
+      },
+      {
+        "executionId": "f16ca5f1-af7f-4c82-90e9-86834f7f5bc7",
+        "chatSessionId": "sess_b8b2a659-198f-4f49-b4bc-efb15b961f67",
+        "timestamp": 1786041970104
+      }
+    ],
+    "Create `ErrorResponse` model (error, message, code)": [
+      {
+        "executionId": "77f22743-8f4b-4e24-ae38-55258982c9f3",
+        "chatSessionId": "sess_05a98602-2c9e-4f29-8f8a-0277cb9962c9",
+        "timestamp": 1786041992607
+      },
+      {
+        "executionId": "77f22743-8f4b-4e24-ae38-55258982c9f3",
+        "chatSessionId": "sess_05a98602-2c9e-4f29-8f8a-0277cb9962c9",
+        "timestamp": 1786042072097
+      }
+    ]
+  }
+}
