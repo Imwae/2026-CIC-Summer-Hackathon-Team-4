@@ -1,7 +1,9 @@
 import { useReducer } from 'react'
+import SyllabusUpload from './components/SyllabusUpload'
+import CommitmentForm from './components/CommitmentForm'
 import Breakdown from './components/Breakdown'
 import Suggestions from './components/Suggestions'
-import { getSuggestions } from './api'
+import { analyzeSemester, getSuggestions } from './api'
 import './App.css'
 
 // --- Phase Constants ---
@@ -216,12 +218,33 @@ function canRunAnalysis(state) {
 function App() {
   const [state, dispatch] = useReducer(appReducer, initialState)
 
-  // Handler: transition to analyzing phase
-  const handleRunAnalysis = () => {
+  // Handler: call the analysis API
+  const handleRunAnalysis = async () => {
     if (!canRunAnalysis(state)) return
     dispatch({ type: Actions.SET_PHASE, payload: PHASES.ANALYZING })
     dispatch({ type: Actions.SET_LOADING, payload: true })
-    // Actual API call will be wired in api.js integration task
+
+    try {
+      // Build courses array from extraction results
+      const courses = state.courses.map((c) => ({
+        course_code: c.extractionResult.course_code,
+        course_name: c.extractionResult.course_name,
+        deliverables: c.extractionResult.deliverables,
+      }))
+
+      const result = await analyzeSemester({
+        courses,
+        commitments: state.commitments,
+        breakWeeks: state.breakWeeks,
+        semesterStart: '2025-09-08',  // TODO: make configurable via date picker
+        semesterEnd: '2025-12-22',    // TODO: make configurable via date picker
+      })
+
+      dispatch({ type: Actions.SET_ANALYSIS_RESULT, payload: result })
+    } catch (err) {
+      dispatch({ type: Actions.SET_ERROR, payload: err.message })
+      dispatch({ type: Actions.SET_PHASE, payload: PHASES.INPUT })
+    }
   }
 
   // Handler: transition to suggesting phase and call API
@@ -265,15 +288,9 @@ function App() {
         {/* Input phase: syllabus upload + commitment form */}
         {state.appPhase === PHASES.INPUT && (
           <section className="phase-input">
-            {/* Placeholder for SyllabusUpload component */}
-            <div className="placeholder" data-component="SyllabusUpload">
-              <p>Syllabus Upload (placeholder)</p>
-            </div>
+            <SyllabusUpload dispatch={dispatch} courses={state.courses} />
 
-            {/* Placeholder for CommitmentForm component */}
-            <div className="placeholder" data-component="CommitmentForm">
-              <p>Commitment Form (placeholder)</p>
-            </div>
+            <CommitmentForm dispatch={dispatch} commitments={state.commitments} breakWeeks={state.breakWeeks} />
 
             {/* Run Analysis button — disabled until gate condition met */}
             <button
