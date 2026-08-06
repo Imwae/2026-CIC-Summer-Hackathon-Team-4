@@ -107,12 +107,12 @@
 
 ### Subtasks:
 - [x] Create FastAPI app instance with CORS middleware (allow localhost:5173 in dev)
-- [ ] Implement `POST /api/extract` — accepts JSON (text paste) or multipart (PDF upload), calls extractor then bedrock_client, returns ExtractionResponse
-- [ ] Implement `POST /api/commitments/parse` — accepts free-text, calls bedrock_client, returns CommitmentParseResponse
-- [ ] Implement `POST /api/analyze` — accepts AnalysisRequest, runs capacity.compute_capacity, calls bedrock_client for narrative, returns AnalysisResponse
-- [ ] Implement `POST /api/suggest` — accepts SuggestionRequest, calls bedrock_client, returns SuggestionResponse
-- [ ] Implement global exception handler — catches all unhandled exceptions, returns ErrorResponse (never exposes stack traces)
-- [ ] Add static file serving for production (serve `frontend/dist/` at root)
+- [x] Implement `POST /api/extract` — accepts JSON (text paste) or multipart (PDF upload), calls extractor then bedrock_client, returns ExtractionResponse
+- [x] Implement `POST /api/commitments/parse` — accepts free-text, calls bedrock_client, returns CommitmentParseResponse
+- [x] Implement `POST /api/analyze` — accepts AnalysisRequest, runs capacity.compute_capacity, calls bedrock_client for narrative, returns AnalysisResponse
+- [x] Implement `POST /api/suggest` — accepts SuggestionRequest, calls bedrock_client, returns SuggestionResponse
+- [x] Implement global exception handler — catches all unhandled exceptions, returns ErrorResponse (never exposes stack traces)
+- [x] Add static file serving for production (serve `frontend/dist/` at root)
 
 **Acceptance Criterion:** All four API endpoints respond with the correct JSON shape. Errors return `{ error: true, message, code }`. The server starts with `uvicorn backend.main:app` without errors.
 
@@ -145,12 +145,12 @@
 **Depends on:** Task 7
 
 ### Subtasks:
-- [ ] Create file upload zone (drag-drop area + file input for PDFs)
-- [ ] Create text paste input (textarea with submit button per course)
-- [ ] Display per-file extraction status cards (pending, extracting spinner, success with item count, failure with retry)
-- [ ] On successful extraction, display deliverable table with editable prep-week fields
-- [ ] On failure, show prompt to re-upload or paste text — without clearing other successful extractions
-- [ ] Integrate with `api.js` extract endpoint
+- [x] Create file upload zone (drag-drop area + file input for PDFs)
+- [x] Create text paste input (textarea with submit button per course)
+- [x] Display per-file extraction status cards (pending, extracting spinner, success with item count, failure with retry)
+- [x] On successful extraction, display deliverable table with editable prep-week fields
+- [x] On failure, show prompt to re-upload or paste text — without clearing other successful extractions
+- [x] Integrate with `api.js` extract endpoint
 
 **Acceptance Criterion:** A user can paste text and see extracted deliverables displayed in a table. A user can upload a PDF and see extraction status. Failed extractions show a retry prompt. Prep-week values are editable before analysis.
 

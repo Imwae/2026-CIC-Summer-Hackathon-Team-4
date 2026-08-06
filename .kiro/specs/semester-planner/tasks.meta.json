@@ -1,6 +1,78 @@
 {
   "pbtResults": {},
   "executionHistory": {
+    "Create file upload zone (drag-drop area + file input for PDFs)": [
+      {
+        "executionId": "bb43eb4c-1e1c-47ad-884a-23f84f05f861",
+        "chatSessionId": "sess_4cd58ecf-d7f8-4688-9bda-87b6b09447eb",
+        "timestamp": 1786045742659
+      },
+      {
+        "executionId": "bb43eb4c-1e1c-47ad-884a-23f84f05f861",
+        "chatSessionId": "sess_4cd58ecf-d7f8-4688-9bda-87b6b09447eb",
+        "timestamp": 1786046029362
+      }
+    ],
+    "Create text paste input (textarea with submit button per course)": [
+      {
+        "executionId": "3b54e09a-edbe-42fb-9fcd-95548279e4c4",
+        "chatSessionId": "sess_61ae2576-e631-4e55-aaf0-f85b6f73d0b1",
+        "timestamp": 1786046043352
+      },
+      {
+        "executionId": "3b54e09a-edbe-42fb-9fcd-95548279e4c4",
+        "chatSessionId": "sess_61ae2576-e631-4e55-aaf0-f85b6f73d0b1",
+        "timestamp": 1786046159602
+      }
+    ],
+    "Display per-file extraction status cards (pending, extracting spinner, success with item count, failure with retry)": [
+      {
+        "executionId": "d2c40a3e-df87-4ce4-835b-e9a2a9a10064",
+        "chatSessionId": "sess_c5bec4e6-78ce-4cb2-88a3-a047552fc6db",
+        "timestamp": 1786046185694
+      },
+      {
+        "executionId": "d2c40a3e-df87-4ce4-835b-e9a2a9a10064",
+        "chatSessionId": "sess_c5bec4e6-78ce-4cb2-88a3-a047552fc6db",
+        "timestamp": 1786046289455
+      }
+    ],
+    "On successful extraction, display deliverable table with editable prep-week fields": [
+      {
+        "executionId": "1ec56cdc-ac80-4708-a113-40ffff5d83cb",
+        "chatSessionId": "sess_bc55e486-b7dd-49c2-a51a-da3dabd1e6f0",
+        "timestamp": 1786046304828
+      },
+      {
+        "executionId": "1ec56cdc-ac80-4708-a113-40ffff5d83cb",
+        "chatSessionId": "sess_bc55e486-b7dd-49c2-a51a-da3dabd1e6f0",
+        "timestamp": 1786046444428
+      }
+    ],
+    "On failure, show prompt to re-upload or paste text — without clearing other successful extractions": [
+      {
+        "executionId": "93b43acf-cbdd-4f26-b9d9-934491fd7a76",
+        "chatSessionId": "sess_b584c29d-0547-471b-b4c2-85491b60bfb2",
+        "timestamp": 1786046458906
+      },
+      {
+        "executionId": "93b43acf-cbdd-4f26-b9d9-934491fd7a76",
+        "chatSessionId": "sess_b584c29d-0547-471b-b4c2-85491b60bfb2",
+        "timestamp": 1786046596564
+      }
+    ],
+    "Integrate with `api.js` extract endpoint": [
+      {
+        "executionId": "f76b64a1-adbb-476b-ab56-39707e13f229",
+        "chatSessionId": "sess_d42c4d5d-956f-4fbe-9ec8-9331d0f53684",
+        "timestamp": 1786046609081
+      },
+      {
+        "executionId": "f76b64a1-adbb-476b-ab56-39707e13f229",
+        "chatSessionId": "sess_d42c4d5d-956f-4fbe-9ec8-9331d0f53684",
+        "timestamp": 1786046702276
+      }
+    ],
     "Implement `extract_text_from_pdf(file_bytes: bytes) -> str | None` — uses PyPDF2 to extract text from uploaded PDF bytes": [
       {
         "executionId": "39667837-764c-460d-a764-9570a9c1e3c6",
@@ -37,6 +109,7 @@
         "timestamp": 1786046214182
       }
     ],
+<<<<<<< HEAD
     "Implement `Timeline.jsx` with Chart.js stacked bar chart (weeks on x-axis, hours on y-axis)": [
       {
         "executionId": "d7ef5ba9-293b-4a27-9f23-ceec7edd88f9",
@@ -131,6 +204,78 @@
         "executionId": "28d7f13c-466a-41fc-ba2c-5adb00215737",
         "chatSessionId": "sess_a584d6ef-92db-4848-9aa6-4b8eb676e98f",
         "timestamp": 1786048145138
+=======
+    "Implement `POST /api/extract` — accepts JSON (text paste) or multipart (PDF upload), calls extractor then bedrock_client, returns ExtractionResponse": [
+      {
+        "executionId": "2920c347-c5e3-4413-9f5b-63d0e9d955fc",
+        "chatSessionId": "sess_e0f2814e-7cd3-43f4-9cb1-9fb61937e6ed",
+        "timestamp": 1786047108144
+      },
+      {
+        "executionId": "2920c347-c5e3-4413-9f5b-63d0e9d955fc",
+        "chatSessionId": "sess_e0f2814e-7cd3-43f4-9cb1-9fb61937e6ed",
+        "timestamp": 1786047190035
+      }
+    ],
+    "Implement `POST /api/commitments/parse` — accepts free-text, calls bedrock_client, returns CommitmentParseResponse": [
+      {
+        "executionId": "ed4dbc3e-c4ac-4245-94df-8b4016f7f1bc",
+        "chatSessionId": "sess_5f9c76df-df02-4a29-a4bf-5813ad2833a6",
+        "timestamp": 1786047202711
+      },
+      {
+        "executionId": "ed4dbc3e-c4ac-4245-94df-8b4016f7f1bc",
+        "chatSessionId": "sess_5f9c76df-df02-4a29-a4bf-5813ad2833a6",
+        "timestamp": 1786047298433
+      }
+    ],
+    "Implement `POST /api/analyze` — accepts AnalysisRequest, runs capacity.compute_capacity, calls bedrock_client for narrative, returns AnalysisResponse": [
+      {
+        "executionId": "509f9a55-f1ab-41a3-83c8-75157bb0b3bd",
+        "chatSessionId": "sess_e1d74c60-83aa-4d36-9e54-8170628eb12a",
+        "timestamp": 1786047314151
+      },
+      {
+        "executionId": "509f9a55-f1ab-41a3-83c8-75157bb0b3bd",
+        "chatSessionId": "sess_e1d74c60-83aa-4d36-9e54-8170628eb12a",
+        "timestamp": 1786047396369
+      }
+    ],
+    "Implement `POST /api/suggest` — accepts SuggestionRequest, calls bedrock_client, returns SuggestionResponse": [
+      {
+        "executionId": "e3887143-058d-4288-a544-a0fcd97bc5c3",
+        "chatSessionId": "sess_1f954496-68b1-444f-a290-cee493f35c44",
+        "timestamp": 1786047408544
+      },
+      {
+        "executionId": "e3887143-058d-4288-a544-a0fcd97bc5c3",
+        "chatSessionId": "sess_1f954496-68b1-444f-a290-cee493f35c44",
+        "timestamp": 1786047497865
+      }
+    ],
+    "Implement global exception handler — catches all unhandled exceptions, returns ErrorResponse (never exposes stack traces)": [
+      {
+        "executionId": "2f8b4ab7-de43-45c3-b811-ebc07f359356",
+        "chatSessionId": "sess_ed046bd7-5794-4dfa-91b2-57286fff4476",
+        "timestamp": 1786047512835
+      },
+      {
+        "executionId": "2f8b4ab7-de43-45c3-b811-ebc07f359356",
+        "chatSessionId": "sess_ed046bd7-5794-4dfa-91b2-57286fff4476",
+        "timestamp": 1786047772284
+      }
+    ],
+    "Add static file serving for production (serve `frontend/dist/` at root)": [
+      {
+        "executionId": "c3fc9e94-d722-418d-8187-3de3e168c6ea",
+        "chatSessionId": "sess_d301f9ab-e803-4167-a177-fdc7ccd40c42",
+        "timestamp": 1786047790467
+      },
+      {
+        "executionId": "c3fc9e94-d722-418d-8187-3de3e168c6ea",
+        "chatSessionId": "sess_d301f9ab-e803-4167-a177-fdc7ccd40c42",
+        "timestamp": 1786047884861
+>>>>>>> 9199cef3014bad19bb60a042afcc3649169e03e9
       }
     ]
   }
