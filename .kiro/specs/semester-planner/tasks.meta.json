@@ -300,6 +300,139 @@
         "chatSessionId": "sess_f9611cfe-0ef5-4a6c-baf0-c0ec54c090b0",
         "timestamp": 1786043812142
       }
+    ],
+    "Create FastAPI app instance with CORS middleware (allow localhost:5173 in dev)": [
+      {
+        "executionId": "416f9d45-5b7a-4418-a133-881fbd56864d",
+        "chatSessionId": "sess_e1088d0c-137a-472e-b511-865ced696c74",
+        "timestamp": 1786043857165
+      },
+      {
+        "executionId": "416f9d45-5b7a-4418-a133-881fbd56864d",
+        "chatSessionId": "sess_e1088d0c-137a-472e-b511-865ced696c74",
+        "timestamp": 1786044000420
+      }
+    ],
+    "Implement `POST /api/extract` — accepts JSON (text paste) or multipart (PDF upload), calls extractor then bedrock_client, returns ExtractionResponse": [
+      {
+        "executionId": "08e59647-c31c-45b3-80e5-a15875d958e3",
+        "chatSessionId": "sess_597961b8-2265-4262-93bf-199c790face1",
+        "timestamp": 1786044012666
+      }
+    ],
+    "Implement `POST /api/commitments/parse` — accepts free-text, calls bedrock_client, returns CommitmentParseResponse": [
+      {
+        "executionId": "55808c3f-9c3c-4496-bb0a-611e721495d3",
+        "chatSessionId": "sess_e71dcd74-b8da-458f-9d02-1e868ea5f1c1",
+        "timestamp": 1786044122868
+      }
+    ],
+    "Implement `POST /api/analyze` — accepts AnalysisRequest, runs capacity.compute_capacity, calls bedrock_client for narrative, returns AnalysisResponse": [
+      {
+        "executionId": "4b522562-253f-425d-8421-e9473d128e43",
+        "chatSessionId": "sess_fd26b569-3e3e-46c1-9607-abfc6b685f3f",
+        "timestamp": 1786044219641
+      }
+    ],
+    "Implement `POST /api/suggest` — accepts SuggestionRequest, calls bedrock_client, returns SuggestionResponse": [
+      {
+        "executionId": "2e50fcd8-acd4-4e18-bbc1-56b6b2bb9946",
+        "chatSessionId": "sess_452aaf42-0222-47d7-947a-462dc8fece50",
+        "timestamp": 1786044244787
+      }
+    ],
+    "Implement global exception handler — catches all unhandled exceptions, returns ErrorResponse (never exposes stack traces)": [
+      {
+        "executionId": "308f1133-5a1a-4cb8-b0e8-5c74d1d7b4ae",
+        "chatSessionId": "sess_289e43c8-e49e-4a55-a21b-2f80b8a5fa70",
+        "timestamp": 1786044282620
+      }
+    ],
+    "Add static file serving for production (serve `frontend/dist/` at root)": [
+      {
+        "executionId": "60043ff8-a66d-4192-b6d4-adb1118d84ca",
+        "chatSessionId": "sess_12040428-aef2-4a0e-a060-48f7575e83f6",
+        "timestamp": 1786044308545
+      }
+    ],
+    "Initialize Vite React project in `frontend/` directory": [
+      {
+        "executionId": "ed031074-1e93-40f9-bf52-614b3aac6a13",
+        "chatSessionId": "sess_0e7d0f7c-4147-4432-b197-b742d3aaf605",
+        "timestamp": 1786044524639
+      },
+      {
+        "executionId": "ed031074-1e93-40f9-bf52-614b3aac6a13",
+        "chatSessionId": "sess_0e7d0f7c-4147-4432-b197-b742d3aaf605",
+        "timestamp": 1786044674485
+      }
+    ],
+    "Configure `vite.config.js` with proxy: `/api` → `http://localhost:8000`": [
+      {
+        "executionId": "85bf91e3-715a-4d9e-b03b-a5a6102527de",
+        "chatSessionId": "sess_d051cd59-d0f2-4866-8ed7-05bf8c50ee6a",
+        "timestamp": 1786044683469
+      },
+      {
+        "executionId": "85bf91e3-715a-4d9e-b03b-a5a6102527de",
+        "chatSessionId": "sess_d051cd59-d0f2-4866-8ed7-05bf8c50ee6a",
+        "timestamp": 1786044819029
+      }
+    ],
+    "Install dependencies: react, react-dom, chart.js, react-chartjs-2": [
+      {
+        "executionId": "1303a25f-ebb6-40f7-b52d-e9da0554f405",
+        "chatSessionId": "sess_89ff6a0c-e849-4d3f-a6ca-62c08f14f245",
+        "timestamp": 1786044829893
+      },
+      {
+        "executionId": "1303a25f-ebb6-40f7-b52d-e9da0554f405",
+        "chatSessionId": "sess_89ff6a0c-e849-4d3f-a6ca-62c08f14f245",
+        "timestamp": 1786044863745
+      }
+    ],
+    "Create `src/main.jsx` entry point": [
+      {
+        "executionId": "09d68efa-6b01-428a-a446-dccd2d04920d",
+        "chatSessionId": "sess_777f817f-732d-4132-8737-4befe6d72643",
+        "timestamp": 1786044876101
+      },
+      {
+        "executionId": "09d68efa-6b01-428a-a446-dccd2d04920d",
+        "chatSessionId": "sess_777f817f-732d-4132-8737-4befe6d72643",
+        "timestamp": 1786044994705
+      }
+    ],
+    "Create `src/App.jsx` with state management (useReducer) and phase tracking": [
+      {
+        "executionId": "a0601dd5-7346-4849-8bde-467f69c2b208",
+        "chatSessionId": "sess_fa150210-c111-42be-8861-b8bc0cb1f760",
+        "timestamp": 1786045007104
+      },
+      {
+        "executionId": "a0601dd5-7346-4849-8bde-467f69c2b208",
+        "chatSessionId": "sess_fa150210-c111-42be-8861-b8bc0cb1f760",
+        "timestamp": 1786045126355
+      }
+    ],
+    "Create `src/api.js` with fetch helpers for all 4 API endpoints (extract, parse, analyze, suggest)": [
+      {
+        "executionId": "a200f982-39c2-4161-9c91-8ce167c0e588",
+        "chatSessionId": "sess_8fe70760-a668-4f47-8ff7-652be09b2623",
+        "timestamp": 1786045137899
+      },
+      {
+        "executionId": "a200f982-39c2-4161-9c91-8ce167c0e588",
+        "chatSessionId": "sess_8fe70760-a668-4f47-8ff7-652be09b2623",
+        "timestamp": 1786045257692
+      }
+    ],
+    "Verify `npm run dev` starts successfully and proxies API calls": [
+      {
+        "executionId": "13f790ac-8eb5-406b-961d-23a1614af76f",
+        "chatSessionId": "sess_da67998a-b85f-4ce0-8788-e0330db704d3",
+        "timestamp": 1786045269123
+      }
     ]
   }
 }

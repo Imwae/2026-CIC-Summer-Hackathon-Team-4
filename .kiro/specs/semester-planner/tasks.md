@@ -106,7 +106,7 @@
 **Depends on:** Tasks 1, 3, 4, 5
 
 ### Subtasks:
-- [ ] Create FastAPI app instance with CORS middleware (allow localhost:5173 in dev)
+- [x] Create FastAPI app instance with CORS middleware (allow localhost:5173 in dev)
 - [ ] Implement `POST /api/extract` — accepts JSON (text paste) or multipart (PDF upload), calls extractor then bedrock_client, returns ExtractionResponse
 - [ ] Implement `POST /api/commitments/parse` — accepts free-text, calls bedrock_client, returns CommitmentParseResponse
 - [ ] Implement `POST /api/analyze` — accepts AnalysisRequest, runs capacity.compute_capacity, calls bedrock_client for narrative, returns AnalysisResponse
@@ -125,13 +125,13 @@
 **Stories:** All (frontend foundation)
 
 ### Subtasks:
-- [ ] Initialize Vite React project in `frontend/` directory
-- [ ] Configure `vite.config.js` with proxy: `/api` → `http://localhost:8000`
-- [ ] Install dependencies: react, react-dom, chart.js, react-chartjs-2
-- [ ] Create `src/main.jsx` entry point
-- [ ] Create `src/App.jsx` with state management (useReducer) and phase tracking
-- [ ] Create `src/api.js` with fetch helpers for all 4 API endpoints (extract, parse, analyze, suggest)
-- [ ] Verify `npm run dev` starts successfully and proxies API calls
+- [x] Initialize Vite React project in `frontend/` directory
+- [x] Configure `vite.config.js` with proxy: `/api` → `http://localhost:8000`
+- [x] Install dependencies: react, react-dom, chart.js, react-chartjs-2
+- [x] Create `src/main.jsx` entry point
+- [x] Create `src/App.jsx` with state management (useReducer) and phase tracking
+- [x] Create `src/api.js` with fetch helpers for all 4 API endpoints (extract, parse, analyze, suggest)
+- [x] Verify `npm run dev` starts successfully and proxies API calls
 
 **Acceptance Criterion:** `npm run dev` launches the Vite dev server. Navigating to localhost:5173 shows the app shell. API calls from `api.js` reach the backend via the proxy.
 
