@@ -107,12 +107,12 @@
 
 ### Subtasks:
 - [x] Create FastAPI app instance with CORS middleware (allow localhost:5173 in dev)
-- [ ] Implement `POST /api/extract` — accepts JSON (text paste) or multipart (PDF upload), calls extractor then bedrock_client, returns ExtractionResponse
-- [ ] Implement `POST /api/commitments/parse` — accepts free-text, calls bedrock_client, returns CommitmentParseResponse
-- [ ] Implement `POST /api/analyze` — accepts AnalysisRequest, runs capacity.compute_capacity, calls bedrock_client for narrative, returns AnalysisResponse
-- [ ] Implement `POST /api/suggest` — accepts SuggestionRequest, calls bedrock_client, returns SuggestionResponse
-- [ ] Implement global exception handler — catches all unhandled exceptions, returns ErrorResponse (never exposes stack traces)
-- [ ] Add static file serving for production (serve `frontend/dist/` at root)
+- [x] Implement `POST /api/extract` — accepts JSON (text paste) or multipart (PDF upload), calls extractor then bedrock_client, returns ExtractionResponse
+- [x] Implement `POST /api/commitments/parse` — accepts free-text, calls bedrock_client, returns CommitmentParseResponse
+- [x] Implement `POST /api/analyze` — accepts AnalysisRequest, runs capacity.compute_capacity, calls bedrock_client for narrative, returns AnalysisResponse
+- [x] Implement `POST /api/suggest` — accepts SuggestionRequest, calls bedrock_client, returns SuggestionResponse
+- [x] Implement global exception handler — catches all unhandled exceptions, returns ErrorResponse (never exposes stack traces)
+- [x] Add static file serving for production (serve `frontend/dist/` at root)
 
 **Acceptance Criterion:** All four API endpoints respond with the correct JSON shape. Errors return `{ error: true, message, code }`. The server starts with `uvicorn backend.main:app` without errors.
 
@@ -184,14 +184,14 @@
 **Depends on:** Task 7
 
 ### Subtasks:
-- [ ] Implement `Timeline.jsx` with Chart.js stacked bar chart (weeks on x-axis, hours on y-axis)
-- [ ] Color-code stacked bars by course (prep hours) + commitments
-- [ ] Highlight over-capacity weeks with red background/border
-- [ ] Mark collision weeks with warning indicator
-- [ ] Gray out break weeks
-- [ ] Implement `Breakdown.jsx` with Chart.js doughnut/pie chart
-- [ ] Show each commitment as proportional slice with label + percentage
-- [ ] Visually distinguish locked vs unlocked commitments (border style or pattern)
+- [x] Implement `Timeline.jsx` with Chart.js stacked bar chart (weeks on x-axis, hours on y-axis)
+- [x] Color-code stacked bars by course (prep hours) + commitments
+- [x] Highlight over-capacity weeks with red background/border
+- [x] Mark collision weeks with warning indicator
+- [x] Gray out break weeks
+- [x] Implement `Breakdown.jsx` with Chart.js doughnut/pie chart
+- [x] Show each commitment as proportional slice with label + percentage
+- [x] Visually distinguish locked vs unlocked commitments (border style or pattern)
 
 **Acceptance Criterion:** Given an AnalysisResponse, the Timeline renders a stacked bar chart with visible red highlighting on over-capacity weeks and collision indicators. The Breakdown renders a pie chart with labeled slices totaling 100%.
 

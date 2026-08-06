@@ -1,4 +1,5 @@
 import { useReducer } from 'react'
+import Breakdown from './components/Breakdown'
 import './App.css'
 
 // --- Phase Constants ---
@@ -290,10 +291,8 @@ function App() {
               <p>Timeline (placeholder)</p>
             </div>
 
-            {/* Placeholder for Breakdown component */}
-            <div className="placeholder" data-component="Breakdown">
-              <p>Breakdown (placeholder)</p>
-            </div>
+            {/* Breakdown component — pie chart of commitment proportions */}
+            <Breakdown commitments={state.commitments} />
 
             {/* Get Suggestions button — shown when over-capacity weeks exist */}
             {state.analysisResult && (
