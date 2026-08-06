@@ -225,16 +225,32 @@ function App() {
     dispatch({ type: Actions.SET_LOADING, payload: true })
 
     try {
-      // Build courses array from extraction results
+      // Build courses array from extraction results, sanitizing types
       const courses = state.courses.map((c) => ({
-        course_code: c.extractionResult.course_code,
-        course_name: c.extractionResult.course_name,
-        deliverables: c.extractionResult.deliverables,
+        course_code: c.extractionResult.course_code || 'UNKNOWN',
+        course_name: c.extractionResult.course_name || c.fileName || 'Unknown Course',
+        deliverables: (c.extractionResult.deliverables || []).map((d) => ({
+          name: d.name || 'Unnamed',
+          type: ['exam', 'essay', 'project', 'presentation', 'lab', 'other'].includes(d.type) ? d.type : 'other',
+          due_date: d.due_date || null,
+          week_number: parseInt(d.week_number, 10) || 1,
+          weight_percent: d.weight_percent != null ? parseFloat(d.weight_percent) : null,
+          estimated_prep_weeks: parseInt(d.estimated_prep_weeks, 10) || 1,
+          estimated_hours_total: parseFloat(d.estimated_hours_total) || 1.0,
+        })),
+      }))
+
+      // Sanitize commitments to match expected schema
+      const commitments = state.commitments.map((c) => ({
+        name: c.name || 'Unknown',
+        category: ['work', 'commute', 'sleep', 'extracurricular', 'leisure', 'other'].includes(c.category) ? c.category : 'other',
+        hours_per_week: parseFloat(c.hours_per_week) || 0,
+        locked: Boolean(c.locked),
       }))
 
       const result = await analyzeSemester({
         courses,
-        commitments: state.commitments,
+        commitments,
         breakWeeks: state.breakWeeks,
         semesterStart: '2025-09-08',  // TODO: make configurable via date picker
         semesterEnd: '2025-12-22',    // TODO: make configurable via date picker

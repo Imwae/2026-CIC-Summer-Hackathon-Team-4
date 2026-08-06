@@ -1,9 +1,10 @@
 """Pydantic schemas for the Semester Capacity Planner API contract."""
 
+import re
 from datetime import date
 from typing import Dict, List, Literal, Optional
 
-from pydantic import BaseModel
+from pydantic import BaseModel, field_validator
 
 
 class Deliverable(BaseModel):
@@ -16,6 +17,23 @@ class Deliverable(BaseModel):
     weight_percent: Optional[float] = None
     estimated_prep_weeks: int
     estimated_hours_total: float
+
+    @field_validator('week_number', 'estimated_prep_weeks', mode='before')
+    @classmethod
+    def coerce_to_int(cls, v):
+        if isinstance(v, str):
+            # Handle "Week 5" style strings
+            match = re.search(r'\d+', str(v))
+            return int(match.group()) if match else 1
+        return int(v) if v is not None else 1
+
+    @field_validator('type', mode='before')
+    @classmethod
+    def coerce_type(cls, v):
+        valid_types = {"exam", "essay", "project", "presentation", "lab", "other"}
+        if isinstance(v, str) and v.lower() in valid_types:
+            return v.lower()
+        return "other"
 
 
 class ExtractionRequest(BaseModel):
