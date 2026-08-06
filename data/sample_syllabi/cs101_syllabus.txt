@@ -1,0 +1,80 @@
+CS101 — Introduction to Computer Science
+Fall 2025
+Department of Computer Science, University of Waterloo
+
+Instructor: Dr. Sarah Chen
+Office Hours: Tuesdays and Thursdays, 2:00–3:30 PM (MC 4067)
+Lecture: MWF 10:30–11:20 AM, Room DC 1351
+Tutorial: Fridays 1:30–2:20 PM, Room MC 2038
+
+---
+
+COURSE DESCRIPTION
+
+This course introduces the fundamental concepts of computer science including
+problem-solving techniques, algorithm design, data representation, and
+introductory programming in Python. Students will develop computational thinking
+skills applicable to diverse disciplines.
+
+REQUIRED TEXTBOOK
+
+Downey, A. (2015). Think Python: How to Think Like a Computer Scientist, 2nd ed.
+O'Reilly Media. (Available free online.)
+
+---
+
+EVALUATION SCHEME
+
+All deliverables must be submitted by 11:59 PM on the stated due date.
+Late submissions lose 10% per day, to a maximum of 3 days, after which the
+submission receives zero.
+
+| Deliverable                | Due Date       | Weight |
+|----------------------------|----------------|--------|
+| Assignment 1: Variables    | Week 4         |   10%  |
+| Assignment 2: Functions    | 2025-10-20     |   15%  |
+| Midterm Exam               | Week 7         |   25%  |
+| Assignment 3: Data Struct. | 2025-11-17     |   15%  |
+| Final Exam                 | 2025-12-12     |   35%  |
+
+---
+
+ASSIGNMENT DETAILS
+
+Assignment 1 — Variables and Control Flow (Week 4, 10%)
+Write programs that demonstrate variable assignment, conditional logic, and
+loops. Estimated preparation: 2 weeks of steady work, approximately 10 hours
+total.
+
+Assignment 2 — Functions and Modularity (due 2025-10-20, 15%)
+Design and implement modular solutions using functions, parameters, and return
+values. Expect roughly 14 hours of effort spread over 2 weeks.
+
+Assignment 3 — Data Structures (due 2025-11-17, 15%)
+Implement solutions using lists, dictionaries, and basic file I/O. Plan for
+about 16 hours of work over 3 weeks.
+
+MIDTERM EXAM (Week 7, 25%)
+Covers lectures 1 through 18 (Weeks 1–6). The exam is closed-book, 90 minutes,
+held in class. Budget 2 weeks of review, approximately 15 hours of study.
+
+FINAL EXAM (2025-12-12, 35%)
+Comprehensive, covering the entire course. Three-hour sit-down exam scheduled
+during the final exam period. Start reviewing at least 3 weeks in advance;
+expect 20–25 hours of study time.
+
+---
+
+ACADEMIC INTEGRITY
+
+All submitted work must be your own. Collaboration on assignments is permitted
+for discussion of concepts only; submitted code must be individually written.
+Plagiarism detection software is used on all submissions.
+
+---
+
+ACCESSIBILITY
+
+Students requiring academic accommodations should contact AccessAbility Services
+at the start of term and provide documentation to the instructor within the
+first two weeks of class.

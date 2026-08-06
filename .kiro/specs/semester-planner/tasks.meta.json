@@ -1,281 +1,52 @@
 {
   "pbtResults": {},
   "executionHistory": {
-    "Create file upload zone (drag-drop area + file input for PDFs)": [
+    "Create `cs101_syllabus.txt` — sample Computer Science syllabus with 4-5 deliverables, mix of exams and assignments": [
       {
-        "executionId": "bb43eb4c-1e1c-47ad-884a-23f84f05f861",
-        "chatSessionId": "sess_4cd58ecf-d7f8-4688-9bda-87b6b09447eb",
-        "timestamp": 1786045742659
+        "executionId": "8419ced6-f223-4852-a124-4d1835ad13b0",
+        "chatSessionId": "sess_cf6df8fb-6172-4422-ad25-933d49e30be0",
+        "timestamp": 1786048629730
       },
       {
-        "executionId": "bb43eb4c-1e1c-47ad-884a-23f84f05f861",
-        "chatSessionId": "sess_4cd58ecf-d7f8-4688-9bda-87b6b09447eb",
-        "timestamp": 1786046029362
+        "executionId": "8419ced6-f223-4852-a124-4d1835ad13b0",
+        "chatSessionId": "sess_cf6df8fb-6172-4422-ad25-933d49e30be0",
+        "timestamp": 1786048806180
       }
     ],
-    "Create text paste input (textarea with submit button per course)": [
+    "Create `eng200_syllabus.txt` — sample English syllabus with essays and presentations": [
       {
-        "executionId": "3b54e09a-edbe-42fb-9fcd-95548279e4c4",
-        "chatSessionId": "sess_61ae2576-e631-4e55-aaf0-f85b6f73d0b1",
-        "timestamp": 1786046043352
+        "executionId": "ddf5bbe9-2326-4a8b-bcf3-509ec08a1ff5",
+        "chatSessionId": "sess_2c542e1b-a77a-4bef-8d85-5b062e4563e1",
+        "timestamp": 1786048819489
       },
       {
-        "executionId": "3b54e09a-edbe-42fb-9fcd-95548279e4c4",
-        "chatSessionId": "sess_61ae2576-e631-4e55-aaf0-f85b6f73d0b1",
-        "timestamp": 1786046159602
+        "executionId": "ddf5bbe9-2326-4a8b-bcf3-509ec08a1ff5",
+        "chatSessionId": "sess_2c542e1b-a77a-4bef-8d85-5b062e4563e1",
+        "timestamp": 1786048915798
       }
     ],
-    "Display per-file extraction status cards (pending, extracting spinner, success with item count, failure with retry)": [
+    "Create `math150_syllabus.txt` — sample Math syllabus with weekly quizzes and midterm/final": [
       {
-        "executionId": "d2c40a3e-df87-4ce4-835b-e9a2a9a10064",
-        "chatSessionId": "sess_c5bec4e6-78ce-4cb2-88a3-a047552fc6db",
-        "timestamp": 1786046185694
+        "executionId": "d1b62b54-5244-4460-8718-a52605f6739c",
+        "chatSessionId": "sess_e0359745-7cee-4e2c-866a-ac875f758c6b",
+        "timestamp": 1786048931067
       },
       {
-        "executionId": "d2c40a3e-df87-4ce4-835b-e9a2a9a10064",
-        "chatSessionId": "sess_c5bec4e6-78ce-4cb2-88a3-a047552fc6db",
-        "timestamp": 1786046289455
+        "executionId": "d1b62b54-5244-4460-8718-a52605f6739c",
+        "chatSessionId": "sess_e0359745-7cee-4e2c-866a-ac875f758c6b",
+        "timestamp": 1786049014243
       }
     ],
-    "On successful extraction, display deliverable table with editable prep-week fields": [
+    "Ensure dates use the fixed semester window (Sept week 2 – Dec week 3)": [
       {
-        "executionId": "1ec56cdc-ac80-4708-a113-40ffff5d83cb",
-        "chatSessionId": "sess_bc55e486-b7dd-49c2-a51a-da3dabd1e6f0",
-        "timestamp": 1786046304828
+        "executionId": "c5970dcd-e7f9-4781-b770-26e7488bd943",
+        "chatSessionId": "sess_23f53562-c013-4228-9206-fda58a102c83",
+        "timestamp": 1786049037191
       },
       {
-        "executionId": "1ec56cdc-ac80-4708-a113-40ffff5d83cb",
-        "chatSessionId": "sess_bc55e486-b7dd-49c2-a51a-da3dabd1e6f0",
-        "timestamp": 1786046444428
-      }
-    ],
-    "On failure, show prompt to re-upload or paste text — without clearing other successful extractions": [
-      {
-        "executionId": "93b43acf-cbdd-4f26-b9d9-934491fd7a76",
-        "chatSessionId": "sess_b584c29d-0547-471b-b4c2-85491b60bfb2",
-        "timestamp": 1786046458906
-      },
-      {
-        "executionId": "93b43acf-cbdd-4f26-b9d9-934491fd7a76",
-        "chatSessionId": "sess_b584c29d-0547-471b-b4c2-85491b60bfb2",
-        "timestamp": 1786046596564
-      }
-    ],
-    "Integrate with `api.js` extract endpoint": [
-      {
-        "executionId": "f76b64a1-adbb-476b-ab56-39707e13f229",
-        "chatSessionId": "sess_d42c4d5d-956f-4fbe-9ec8-9331d0f53684",
-        "timestamp": 1786046609081
-      },
-      {
-        "executionId": "f76b64a1-adbb-476b-ab56-39707e13f229",
-        "chatSessionId": "sess_d42c4d5d-956f-4fbe-9ec8-9331d0f53684",
-        "timestamp": 1786046702276
-      }
-    ],
-    "Implement `extract_text_from_pdf(file_bytes: bytes) -> str | None` — uses PyPDF2 to extract text from uploaded PDF bytes": [
-      {
-        "executionId": "39667837-764c-460d-a764-9570a9c1e3c6",
-        "chatSessionId": "sess_5112530a-a558-4723-8168-56fd40db2305",
-        "timestamp": 1786045857327
-      },
-      {
-        "executionId": "39667837-764c-460d-a764-9570a9c1e3c6",
-        "chatSessionId": "sess_5112530a-a558-4723-8168-56fd40db2305",
-        "timestamp": 1786046039857
-      }
-    ],
-    "Return `None` if no usable text is extracted (empty or whitespace-only)": [
-      {
-        "executionId": "e8cc2b97-1af9-48fc-901e-32336dc42660",
-        "chatSessionId": "sess_5aebc299-09bb-4a49-870d-53d959fbb6d5",
-        "timestamp": 1786046052426
-      },
-      {
-        "executionId": "e8cc2b97-1af9-48fc-901e-32336dc42660",
-        "chatSessionId": "sess_5aebc299-09bb-4a49-870d-53d959fbb6d5",
-        "timestamp": 1786046085898
-      }
-    ],
-    "Handle corrupted/invalid PDF files gracefully — return None, don't crash": [
-      {
-        "executionId": "918fdfe7-c159-40a0-bcd8-caca2b2aefd7",
-        "chatSessionId": "sess_f335681f-c659-49a9-a2c1-5173bca452b9",
-        "timestamp": 1786046096693
-      },
-      {
-        "executionId": "918fdfe7-c159-40a0-bcd8-caca2b2aefd7",
-        "chatSessionId": "sess_f335681f-c659-49a9-a2c1-5173bca452b9",
-        "timestamp": 1786046214182
-      }
-    ],
-<<<<<<< HEAD
-    "Implement `Timeline.jsx` with Chart.js stacked bar chart (weeks on x-axis, hours on y-axis)": [
-      {
-        "executionId": "d7ef5ba9-293b-4a27-9f23-ceec7edd88f9",
-        "chatSessionId": "sess_998c54ab-f7f6-4e9b-b6f2-23b847d3e227",
-        "timestamp": 1786046566713
-      },
-      {
-        "executionId": "d7ef5ba9-293b-4a27-9f23-ceec7edd88f9",
-        "chatSessionId": "sess_998c54ab-f7f6-4e9b-b6f2-23b847d3e227",
-        "timestamp": 1786047226560
-      }
-    ],
-    "Color-code stacked bars by course (prep hours) + commitments": [
-      {
-        "executionId": "0b77b6b6-b023-408c-9a8e-215109934723",
-        "chatSessionId": "sess_81dc14c8-de09-407b-b956-490899a65409",
-        "timestamp": 1786047243218
-      },
-      {
-        "executionId": "0b77b6b6-b023-408c-9a8e-215109934723",
-        "chatSessionId": "sess_81dc14c8-de09-407b-b956-490899a65409",
-        "timestamp": 1786047497934
-      }
-    ],
-    "Highlight over-capacity weeks with red background/border": [
-      {
-        "executionId": "2b7fb387-9dab-46b7-80a5-ba56eee10681",
-        "chatSessionId": "sess_675813ca-9f11-4316-8bed-40b8ca341106",
-        "timestamp": 1786047511060
-      },
-      {
-        "executionId": "2b7fb387-9dab-46b7-80a5-ba56eee10681",
-        "chatSessionId": "sess_675813ca-9f11-4316-8bed-40b8ca341106",
-        "timestamp": 1786047558387
-      }
-    ],
-    "Mark collision weeks with warning indicator": [
-      {
-        "executionId": "1f6b9ea8-929f-4dd3-8aee-c7bb8e8f409d",
-        "chatSessionId": "sess_329b0a7e-9f13-4c19-9da2-769203b25445",
-        "timestamp": 1786047570670
-      },
-      {
-        "executionId": "1f6b9ea8-929f-4dd3-8aee-c7bb8e8f409d",
-        "chatSessionId": "sess_329b0a7e-9f13-4c19-9da2-769203b25445",
-        "timestamp": 1786047586109
-      }
-    ],
-    "Gray out break weeks": [
-      {
-        "executionId": "8e4fc538-7925-4f1a-b1cd-c02ae32573a2",
-        "chatSessionId": "sess_2e53f72a-c9f0-4599-9fdc-75980aa23e63",
-        "timestamp": 1786047597885
-      },
-      {
-        "executionId": "8e4fc538-7925-4f1a-b1cd-c02ae32573a2",
-        "chatSessionId": "sess_2e53f72a-c9f0-4599-9fdc-75980aa23e63",
-        "timestamp": 1786047696564
-      }
-    ],
-    "Implement `Breakdown.jsx` with Chart.js doughnut/pie chart": [
-      {
-        "executionId": "bd5b0be4-330b-4aa2-892a-83c06b8ec2d4",
-        "chatSessionId": "sess_ceb5745e-556a-4964-ab8c-1241403f15af",
-        "timestamp": 1786047708679
-      },
-      {
-        "executionId": "bd5b0be4-330b-4aa2-892a-83c06b8ec2d4",
-        "chatSessionId": "sess_ceb5745e-556a-4964-ab8c-1241403f15af",
-        "timestamp": 1786047841476
-      }
-    ],
-    "Show each commitment as proportional slice with label + percentage": [
-      {
-        "executionId": "51b8bf42-e3c4-46b8-9eae-46ab7c9632ae",
-        "chatSessionId": "sess_80996f6c-cc19-4bfe-bc3d-fa4e16c2a2ef",
-        "timestamp": 1786047854076
-      },
-      {
-        "executionId": "51b8bf42-e3c4-46b8-9eae-46ab7c9632ae",
-        "chatSessionId": "sess_80996f6c-cc19-4bfe-bc3d-fa4e16c2a2ef",
-        "timestamp": 1786048019931
-      }
-    ],
-    "Visually distinguish locked vs unlocked commitments (border style or pattern)": [
-      {
-        "executionId": "28d7f13c-466a-41fc-ba2c-5adb00215737",
-        "chatSessionId": "sess_a584d6ef-92db-4848-9aa6-4b8eb676e98f",
-        "timestamp": 1786048032665
-      },
-      {
-        "executionId": "28d7f13c-466a-41fc-ba2c-5adb00215737",
-        "chatSessionId": "sess_a584d6ef-92db-4848-9aa6-4b8eb676e98f",
-        "timestamp": 1786048145138
-=======
-    "Implement `POST /api/extract` — accepts JSON (text paste) or multipart (PDF upload), calls extractor then bedrock_client, returns ExtractionResponse": [
-      {
-        "executionId": "2920c347-c5e3-4413-9f5b-63d0e9d955fc",
-        "chatSessionId": "sess_e0f2814e-7cd3-43f4-9cb1-9fb61937e6ed",
-        "timestamp": 1786047108144
-      },
-      {
-        "executionId": "2920c347-c5e3-4413-9f5b-63d0e9d955fc",
-        "chatSessionId": "sess_e0f2814e-7cd3-43f4-9cb1-9fb61937e6ed",
-        "timestamp": 1786047190035
-      }
-    ],
-    "Implement `POST /api/commitments/parse` — accepts free-text, calls bedrock_client, returns CommitmentParseResponse": [
-      {
-        "executionId": "ed4dbc3e-c4ac-4245-94df-8b4016f7f1bc",
-        "chatSessionId": "sess_5f9c76df-df02-4a29-a4bf-5813ad2833a6",
-        "timestamp": 1786047202711
-      },
-      {
-        "executionId": "ed4dbc3e-c4ac-4245-94df-8b4016f7f1bc",
-        "chatSessionId": "sess_5f9c76df-df02-4a29-a4bf-5813ad2833a6",
-        "timestamp": 1786047298433
-      }
-    ],
-    "Implement `POST /api/analyze` — accepts AnalysisRequest, runs capacity.compute_capacity, calls bedrock_client for narrative, returns AnalysisResponse": [
-      {
-        "executionId": "509f9a55-f1ab-41a3-83c8-75157bb0b3bd",
-        "chatSessionId": "sess_e1d74c60-83aa-4d36-9e54-8170628eb12a",
-        "timestamp": 1786047314151
-      },
-      {
-        "executionId": "509f9a55-f1ab-41a3-83c8-75157bb0b3bd",
-        "chatSessionId": "sess_e1d74c60-83aa-4d36-9e54-8170628eb12a",
-        "timestamp": 1786047396369
-      }
-    ],
-    "Implement `POST /api/suggest` — accepts SuggestionRequest, calls bedrock_client, returns SuggestionResponse": [
-      {
-        "executionId": "e3887143-058d-4288-a544-a0fcd97bc5c3",
-        "chatSessionId": "sess_1f954496-68b1-444f-a290-cee493f35c44",
-        "timestamp": 1786047408544
-      },
-      {
-        "executionId": "e3887143-058d-4288-a544-a0fcd97bc5c3",
-        "chatSessionId": "sess_1f954496-68b1-444f-a290-cee493f35c44",
-        "timestamp": 1786047497865
-      }
-    ],
-    "Implement global exception handler — catches all unhandled exceptions, returns ErrorResponse (never exposes stack traces)": [
-      {
-        "executionId": "2f8b4ab7-de43-45c3-b811-ebc07f359356",
-        "chatSessionId": "sess_ed046bd7-5794-4dfa-91b2-57286fff4476",
-        "timestamp": 1786047512835
-      },
-      {
-        "executionId": "2f8b4ab7-de43-45c3-b811-ebc07f359356",
-        "chatSessionId": "sess_ed046bd7-5794-4dfa-91b2-57286fff4476",
-        "timestamp": 1786047772284
-      }
-    ],
-    "Add static file serving for production (serve `frontend/dist/` at root)": [
-      {
-        "executionId": "c3fc9e94-d722-418d-8187-3de3e168c6ea",
-        "chatSessionId": "sess_d301f9ab-e803-4167-a177-fdc7ccd40c42",
-        "timestamp": 1786047790467
-      },
-      {
-        "executionId": "c3fc9e94-d722-418d-8187-3de3e168c6ea",
-        "chatSessionId": "sess_d301f9ab-e803-4167-a177-fdc7ccd40c42",
-        "timestamp": 1786047884861
->>>>>>> 9199cef3014bad19bb60a042afcc3649169e03e9
+        "executionId": "c5970dcd-e7f9-4781-b770-26e7488bd943",
+        "chatSessionId": "sess_23f53562-c013-4228-9206-fda58a102c83",
+        "timestamp": 1786049108324
       }
     ]
   }

@@ -222,10 +222,10 @@
 **Stories:** 1, 2 (testing/demo)
 
 ### Subtasks:
-- [ ] Create `cs101_syllabus.txt` — sample Computer Science syllabus with 4-5 deliverables, mix of exams and assignments
-- [ ] Create `eng200_syllabus.txt` — sample English syllabus with essays and presentations
-- [ ] Create `math150_syllabus.txt` — sample Math syllabus with weekly quizzes and midterm/final
-- [ ] Ensure dates use the fixed semester window (Sept week 2 – Dec week 3)
+- [x] Create `cs101_syllabus.txt` — sample Computer Science syllabus with 4-5 deliverables, mix of exams and assignments
+- [x] Create `eng200_syllabus.txt` — sample English syllabus with essays and presentations
+- [x] Create `math150_syllabus.txt` — sample Math syllabus with weekly quizzes and midterm/final
+- [x] Ensure dates use the fixed semester window (Sept week 2 – Dec week 3)
 
 **Acceptance Criterion:** Each sample file contains realistic syllabus text with identifiable course code, deliverable names, due dates (some absolute, some relative like "Week 6"), and weights.
 

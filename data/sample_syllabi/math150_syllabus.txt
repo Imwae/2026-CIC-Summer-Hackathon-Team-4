@@ -1,0 +1,91 @@
+MATH150 — Calculus I
+Fall 2025
+Department of Mathematics, University of Waterloo
+
+Instructor: Dr. James Park
+Office Hours: Mondays and Wednesdays, 3:00–4:30 PM (MC 5158)
+Lecture: MWF 9:30–10:20 AM, Room MC 4045
+Tutorial: Thursdays 11:30–12:20 PM, Room MC 2054
+
+---
+
+COURSE DESCRIPTION
+
+This course covers the fundamentals of single-variable calculus including limits,
+continuity, differentiation, and integration. Topics include techniques of
+differentiation (product, quotient, and chain rules), applications of
+derivatives (related rates, optimization, curve sketching), the definite
+integral, the Fundamental Theorem of Calculus, and basic integration techniques.
+
+REQUIRED TEXTBOOK
+
+Stewart, J. (2020). Calculus: Early Transcendentals, 9th ed. Cengage Learning.
+(Chapters 1–6 are covered in this course.)
+
+---
+
+EVALUATION SCHEME
+
+All deliverables must be submitted or completed by 11:59 PM on the stated due
+date unless otherwise noted. Late problem sets lose 15% per day, to a maximum of
+2 days, after which the submission receives zero. Quizzes cannot be made up
+without medical documentation submitted within 48 hours.
+
+| Deliverable                | Due Date       | Weight |
+|----------------------------|----------------|--------|
+| Weekly Quizzes             | Weeks 2–14     |   15%  |
+| Problem Set 1              | Week 5         |   10%  |
+| Midterm Exam               | 2025-10-27     |   25%  |
+| Problem Set 2              | Week 11        |   10%  |
+| Final Exam                 | 2025-12-16     |   40%  |
+
+---
+
+ASSIGNMENT DETAILS
+
+Weekly Quizzes (Weeks 2–14, 15%)
+Short 15-minute quizzes administered at the start of Thursday tutorials covering
+material from the previous week's lectures. The lowest two quiz scores are
+dropped. Each quiz tests core computational skills (limits, derivatives,
+integrals). Estimated preparation: 1–2 hours per week of practice problems.
+
+Problem Set 1 — Limits and Differentiation (Week 5, 10%)
+A set of 8–10 multi-part problems covering epsilon-delta proofs of limits,
+limit evaluation techniques, and basic differentiation rules (power, product,
+quotient, and chain rules). Estimated preparation: 2 weeks of steady work,
+approximately 12 hours total.
+
+MIDTERM EXAM (2025-10-27, 25%)
+Covers Weeks 1–7: limits, continuity, definition of the derivative,
+differentiation techniques, and applications of derivatives including related
+rates and linear approximation. The exam is closed-book, 90 minutes, held in
+class during the regular lecture slot. Budget 2 weeks of review, approximately
+18 hours of study.
+
+Problem Set 2 — Integration Techniques (Week 11, 10%)
+A set of 8–10 multi-part problems covering Riemann sums, the Fundamental
+Theorem of Calculus, substitution, and integration by parts. Estimated
+preparation: 2 weeks of effort, approximately 14 hours total.
+
+FINAL EXAM (2025-12-16, 40%)
+Comprehensive, covering all course material from Weeks 1–13 including limits,
+differentiation, applications of derivatives, and integration. Three-hour
+sit-down exam scheduled during the final exam period in the PAC gymnasium.
+Start reviewing at least 3 weeks in advance; expect 25–30 hours of study time.
+
+---
+
+ACADEMIC INTEGRITY
+
+All submitted work must be your own. Collaboration on problem sets is permitted
+for discussion of approaches only; submitted solutions must be individually
+written. Use of online solution-sharing platforms (Chegg, CourseHero, etc.)
+constitutes an academic offense under university policy.
+
+---
+
+ACCESSIBILITY
+
+Students requiring academic accommodations should contact AccessAbility Services
+at the start of term and provide documentation to the instructor within the
+first two weeks of class.
