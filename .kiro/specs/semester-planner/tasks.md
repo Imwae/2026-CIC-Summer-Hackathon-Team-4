@@ -70,9 +70,9 @@
 **Depends on:** Task 1
 
 ### Subtasks:
-- [ ] Implement `extract_text_from_pdf(file_bytes: bytes) -> str | None` — uses PyPDF2 to extract text from uploaded PDF bytes
-- [ ] Return `None` if no usable text is extracted (empty or whitespace-only)
-- [ ] Handle corrupted/invalid PDF files gracefully — return None, don't crash
+- [x] Implement `extract_text_from_pdf(file_bytes: bytes) -> str | None` — uses PyPDF2 to extract text from uploaded PDF bytes
+- [x] Return `None` if no usable text is extracted (empty or whitespace-only)
+- [x] Handle corrupted/invalid PDF files gracefully — return None, don't crash
 
 **Acceptance Criterion:** Given a text-based PDF, the function returns the full text content. Given a scanned/image PDF or corrupt file, it returns None without raising an exception.
 

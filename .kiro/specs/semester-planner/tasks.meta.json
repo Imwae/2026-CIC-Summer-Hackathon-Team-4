@@ -72,6 +72,42 @@
         "chatSessionId": "sess_d42c4d5d-956f-4fbe-9ec8-9331d0f53684",
         "timestamp": 1786046702276
       }
+    ],
+    "Implement `extract_text_from_pdf(file_bytes: bytes) -> str | None` — uses PyPDF2 to extract text from uploaded PDF bytes": [
+      {
+        "executionId": "39667837-764c-460d-a764-9570a9c1e3c6",
+        "chatSessionId": "sess_5112530a-a558-4723-8168-56fd40db2305",
+        "timestamp": 1786045857327
+      },
+      {
+        "executionId": "39667837-764c-460d-a764-9570a9c1e3c6",
+        "chatSessionId": "sess_5112530a-a558-4723-8168-56fd40db2305",
+        "timestamp": 1786046039857
+      }
+    ],
+    "Return `None` if no usable text is extracted (empty or whitespace-only)": [
+      {
+        "executionId": "e8cc2b97-1af9-48fc-901e-32336dc42660",
+        "chatSessionId": "sess_5aebc299-09bb-4a49-870d-53d959fbb6d5",
+        "timestamp": 1786046052426
+      },
+      {
+        "executionId": "e8cc2b97-1af9-48fc-901e-32336dc42660",
+        "chatSessionId": "sess_5aebc299-09bb-4a49-870d-53d959fbb6d5",
+        "timestamp": 1786046085898
+      }
+    ],
+    "Handle corrupted/invalid PDF files gracefully — return None, don't crash": [
+      {
+        "executionId": "918fdfe7-c159-40a0-bcd8-caca2b2aefd7",
+        "chatSessionId": "sess_f335681f-c659-49a9-a2c1-5173bca452b9",
+        "timestamp": 1786046096693
+      },
+      {
+        "executionId": "918fdfe7-c159-40a0-bcd8-caca2b2aefd7",
+        "chatSessionId": "sess_f335681f-c659-49a9-a2c1-5173bca452b9",
+        "timestamp": 1786046214182
+      }
     ]
   }
 }
