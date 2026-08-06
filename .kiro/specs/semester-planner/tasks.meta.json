@@ -108,6 +108,90 @@
         "chatSessionId": "sess_f335681f-c659-49a9-a2c1-5173bca452b9",
         "timestamp": 1786046214182
       }
+    ],
+    "Create structured form with labeled number inputs: work hours, commute hours, sleep hours/night, extracurricular hours, leisure hours": [
+      {
+        "executionId": "7b7e0841-b744-4901-b890-43f74bef1735",
+        "chatSessionId": "sess_49244078-6f84-4374-bc89-c5292964b7cb",
+        "timestamp": 1786047664251
+      },
+      {
+        "executionId": "7b7e0841-b744-4901-b890-43f74bef1735",
+        "chatSessionId": "sess_49244078-6f84-4374-bc89-c5292964b7cb",
+        "timestamp": 1786047895691
+      }
+    ],
+    "Add \"Add Custom Commitment\" button for user-defined entries": [
+      {
+        "executionId": "e0937311-c495-4d29-ac56-c4f0c6b44097",
+        "chatSessionId": "sess_c992db00-8585-426b-b1a3-0e691c3b0a31",
+        "timestamp": 1786047908833
+      },
+      {
+        "executionId": "e0937311-c495-4d29-ac56-c4f0c6b44097",
+        "chatSessionId": "sess_c992db00-8585-426b-b1a3-0e691c3b0a31",
+        "timestamp": 1786048062838
+      }
+    ],
+    "Add lock toggle per commitment (checkbox or icon button) — locked items visually distinguished": [
+      {
+        "executionId": "17a2e3c0-9af5-4535-9b38-a21a62a45e6f",
+        "chatSessionId": "sess_285167de-3dcb-473a-8b33-78dfe622013a",
+        "timestamp": 1786048077219
+      },
+      {
+        "executionId": "17a2e3c0-9af5-4535-9b38-a21a62a45e6f",
+        "chatSessionId": "sess_285167de-3dcb-473a-8b33-78dfe622013a",
+        "timestamp": 1786048185524
+      }
+    ],
+    "Create free-text alternative input (textarea + \"Parse\" button)": [
+      {
+        "executionId": "87842386-8104-46dc-8f17-f8dc4f133edf",
+        "chatSessionId": "sess_8274feb5-c28a-42d9-be6f-be91f3edd399",
+        "timestamp": 1786048198850
+      },
+      {
+        "executionId": "87842386-8104-46dc-8f17-f8dc4f133edf",
+        "chatSessionId": "sess_8274feb5-c28a-42d9-be6f-be91f3edd399",
+        "timestamp": 1786048314049
+      }
+    ],
+    "On parse success, display parsed commitments for confirmation/editing before accepting": [
+      {
+        "executionId": "ec40db45-997b-4acb-87e3-4921d3efdcdc",
+        "chatSessionId": "sess_47bbdfa6-e677-4a16-85ad-afa4fd14a71b",
+        "timestamp": 1786048326392
+      },
+      {
+        "executionId": "ec40db45-997b-4acb-87e3-4921d3efdcdc",
+        "chatSessionId": "sess_47bbdfa6-e677-4a16-85ad-afa4fd14a71b",
+        "timestamp": 1786048462331
+      }
+    ],
+    "Create break week selector (checkboxes or multi-select for weeks 1–15)": [
+      {
+        "executionId": "ce43e4e2-4299-4a33-a43e-977b0bac7bd8",
+        "chatSessionId": "sess_7e55b3db-f08e-46e9-a825-5daf7de2db89",
+        "timestamp": 1786048478295
+      },
+      {
+        "executionId": "ce43e4e2-4299-4a33-a43e-977b0bac7bd8",
+        "chatSessionId": "sess_7e55b3db-f08e-46e9-a825-5daf7de2db89",
+        "timestamp": 1786048598602
+      }
+    ],
+    "Integrate with `api.js` commitments/parse endpoint": [
+      {
+        "executionId": "4674da66-c1f8-4dfd-8388-831109b64016",
+        "chatSessionId": "sess_6cf0d56e-bd9b-4555-9b4f-9e13173b60f6",
+        "timestamp": 1786048611419
+      },
+      {
+        "executionId": "4674da66-c1f8-4dfd-8388-831109b64016",
+        "chatSessionId": "sess_6cf0d56e-bd9b-4555-9b4f-9e13173b60f6",
+        "timestamp": 1786048625226
+      }
     ]
   }
 }

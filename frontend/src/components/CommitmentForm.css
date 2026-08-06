@@ -1,0 +1,632 @@
+.commitment-form {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.commitment-form__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #334155;
+  margin: 0 0 0.375rem;
+}
+
+.commitment-form__description {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin: 0 0 1.5rem;
+  line-height: 1.4;
+}
+
+/* --- Fields container --- */
+.commitment-form__fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* --- Individual field row --- */
+.commitment-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.commitment-form__label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #475569;
+  display: flex;
+  align-items: baseline;
+  gap: 0.375rem;
+}
+
+.commitment-form__unit {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #94a3b8;
+}
+
+.commitment-form__input {
+  padding: 0.625rem 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: #1e293b;
+  background: #ffffff;
+  width: 100%;
+  max-width: 160px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.commitment-form__input:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+.commitment-form__input:hover {
+  border-color: #6366f1;
+}
+
+.commitment-form__hint {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+/* --- Custom Commitments Section --- */
+.commitment-form__custom-section {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.commitment-form__custom-heading {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #334155;
+  margin: 0 0 0.75rem;
+}
+
+.commitment-form__custom-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.commitment-form__custom-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.commitment-form__custom-name {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #475569;
+  min-width: 100px;
+}
+
+.commitment-form__remove-btn {
+  padding: 0.375rem 0.625rem;
+  font-size: 0.75rem;
+  color: #dc2626;
+  background: transparent;
+  border: 1px solid #fca5a5;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.commitment-form__remove-btn:hover {
+  background: #fef2f2;
+  border-color: #dc2626;
+}
+
+.commitment-form__remove-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.12);
+}
+
+/* --- Add Custom Button --- */
+.commitment-form__add-btn {
+  padding: 0.625rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #6366f1;
+  background: transparent;
+  border: 1px dashed #a5b4fc;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.commitment-form__add-btn:hover {
+  background: #eef2ff;
+  border-color: #6366f1;
+}
+
+.commitment-form__add-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+/* --- Add Custom Inline Form --- */
+.commitment-form__add-form {
+  padding: 1rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
+
+.commitment-form__add-form-fields {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.commitment-form__add-form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  flex: 1;
+  min-width: 140px;
+}
+
+.commitment-form__input--text {
+  max-width: none;
+}
+
+.commitment-form__add-form-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.commitment-form__add-form-submit {
+  padding: 0.5rem 1rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #ffffff;
+  background: #6366f1;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.commitment-form__add-form-submit:hover:not(:disabled) {
+  background: #4f46e5;
+}
+
+.commitment-form__add-form-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.commitment-form__add-form-submit:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
+}
+
+.commitment-form__add-form-cancel {
+  padding: 0.5rem 1rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #64748b;
+  background: transparent;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.commitment-form__add-form-cancel:hover {
+  background: #f1f5f9;
+}
+
+.commitment-form__add-form-cancel:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(100, 116, 139, 0.12);
+}
+
+/* --- Lock Toggle Button --- */
+.commitment-form__input-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.commitment-form__lock-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  font-size: 1rem;
+  background: transparent;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+  flex-shrink: 0;
+}
+
+.commitment-form__lock-btn:hover {
+  background: #f1f5f9;
+  border-color: #6366f1;
+}
+
+.commitment-form__lock-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+.commitment-form__lock-btn--active {
+  background: #eef2ff;
+  border-color: #6366f1;
+}
+
+.commitment-form__lock-btn--active:hover {
+  background: #e0e7ff;
+}
+
+/* --- Locked Field State --- */
+.commitment-form__field--locked {
+  background: #f0f9ff;
+  border: 1px solid #93c5fd;
+  border-radius: 8px;
+  padding: 0.75rem;
+}
+
+.commitment-form__custom-item--locked {
+  background: #f0f9ff;
+  border: 1px solid #93c5fd;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+}
+
+/* --- Free-text Alternative Input Section --- */
+.commitment-form__freetext-section {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+.commitment-form__freetext-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.commitment-form__freetext-divider::before,
+.commitment-form__freetext-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #e2e8f0;
+}
+
+.commitment-form__freetext-divider-text {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #64748b;
+  white-space: nowrap;
+}
+
+.commitment-form__freetext-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #475569;
+  margin-bottom: 0.375rem;
+}
+
+.commitment-form__freetext-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-family: inherit;
+  color: #1e293b;
+  background: #ffffff;
+  resize: vertical;
+  min-height: 100px;
+  line-height: 1.5;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.commitment-form__freetext-textarea:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+.commitment-form__freetext-textarea:hover:not(:disabled) {
+  border-color: #6366f1;
+}
+
+.commitment-form__freetext-textarea:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background: #f8fafc;
+}
+
+.commitment-form__freetext-textarea::placeholder {
+  color: #94a3b8;
+}
+
+.commitment-form__freetext-hint {
+  display: block;
+  font-size: 0.75rem;
+  color: #94a3b8;
+  margin-top: 0.25rem;
+}
+
+.commitment-form__freetext-error {
+  font-size: 0.8125rem;
+  color: #dc2626;
+  margin: 0.5rem 0 0;
+  padding: 0.5rem 0.75rem;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 6px;
+}
+
+.commitment-form__freetext-parse-btn {
+  margin-top: 0.75rem;
+  padding: 0.625rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #ffffff;
+  background: #6366f1;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s, opacity 0.2s;
+}
+
+.commitment-form__freetext-parse-btn:hover:not(:disabled) {
+  background: #4f46e5;
+}
+
+.commitment-form__freetext-parse-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.commitment-form__freetext-parse-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
+}
+
+
+/* --- Parsed Confirmation Panel --- */
+.commitment-form__parsed-confirmation {
+  padding: 1.25rem;
+  background: #f0fdf4;
+  border: 1px solid #86efac;
+  border-radius: 10px;
+  margin-top: 0.5rem;
+}
+
+.commitment-form__parsed-heading {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #166534;
+  margin: 0 0 0.25rem;
+}
+
+.commitment-form__parsed-description {
+  font-size: 0.8125rem;
+  color: #4b5563;
+  margin: 0 0 1rem;
+  line-height: 1.4;
+}
+
+.commitment-form__parsed-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.commitment-form__parsed-item {
+  padding: 0.75rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.commitment-form__parsed-item--locked {
+  background: #f0f9ff;
+  border-color: #93c5fd;
+}
+
+.commitment-form__parsed-item-fields {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.commitment-form__parsed-item-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+  min-width: 100px;
+}
+
+.commitment-form__parsed-item-field--category {
+  flex: 0 0 auto;
+  min-width: 80px;
+}
+
+.commitment-form__parsed-item-field--lock {
+  flex: 0 0 auto;
+  min-width: auto;
+  align-items: center;
+}
+
+.commitment-form__parsed-category {
+  display: inline-block;
+  padding: 0.375rem 0.625rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #475569;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  text-transform: capitalize;
+}
+
+/* --- Parsed Confirmation Actions --- */
+.commitment-form__parsed-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.commitment-form__parsed-accept-btn {
+  padding: 0.625rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #ffffff;
+  background: #16a34a;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.commitment-form__parsed-accept-btn:hover {
+  background: #15803d;
+}
+
+.commitment-form__parsed-accept-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.25);
+}
+
+.commitment-form__parsed-cancel-btn {
+  padding: 0.625rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #64748b;
+  background: transparent;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.commitment-form__parsed-cancel-btn:hover {
+  background: #f1f5f9;
+  border-color: #94a3b8;
+}
+
+.commitment-form__parsed-cancel-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(100, 116, 139, 0.12);
+}
+
+
+/* --- Break Week Selector --- */
+.commitment-form__break-section {
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  background: #f8fafc;
+}
+
+.commitment-form__break-legend {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #334155;
+  padding: 0 0.375rem;
+}
+
+.commitment-form__break-description {
+  font-size: 0.8125rem;
+  color: #64748b;
+  margin: 0.25rem 0 1rem;
+  line-height: 1.4;
+}
+
+.commitment-form__break-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(52px, 1fr));
+  gap: 0.5rem;
+}
+
+.commitment-form__break-chip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0.5rem 0.25rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #ffffff;
+  cursor: pointer;
+  transition: border-color 0.2s, background-color 0.2s, box-shadow 0.2s;
+  user-select: none;
+}
+
+.commitment-form__break-chip:hover {
+  border-color: #6366f1;
+  background: #eef2ff;
+}
+
+.commitment-form__break-chip--selected {
+  border-color: #6366f1;
+  background: #eef2ff;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.15);
+}
+
+.commitment-form__break-chip--selected:hover {
+  background: #e0e7ff;
+}
+
+.commitment-form__break-checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.commitment-form__break-checkbox:focus-visible + .commitment-form__break-chip-text {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.commitment-form__break-chip-text {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #475569;
+}
+
+.commitment-form__break-chip--selected .commitment-form__break-chip-text {
+  color: #4338ca;
+  font-weight: 600;
+}
+
+.commitment-form__break-summary {
+  margin: 0.75rem 0 0;
+  font-size: 0.75rem;
+  color: #6366f1;
+  font-weight: 500;
+}
