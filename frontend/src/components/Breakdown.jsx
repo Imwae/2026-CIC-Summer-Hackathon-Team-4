@@ -159,7 +159,7 @@ export default function Breakdown({ commitments }) {
   if (!chartData) return null
 
   return (
-    <div className="breakdown-container" style={{ position: 'relative', width: '100%', minHeight: '350px' }}>
+    <div className="breakdown-container" style={{ position: 'relative', width: '100%', height: '350px', maxWidth: '700px', margin: '0 auto' }}>
       <Doughnut data={chartData} options={options} />
 
       {/* Legend supplement explaining locked vs unlocked visual distinction */}
