@@ -86,13 +86,13 @@
 **Depends on:** Task 1
 
 ### Subtasks:
-- [ ] Implement `generate_weeks(semester_start: date, num_weeks: int) -> list[Week]` — creates week objects with start dates
-- [ ] Implement `spread_prep_hours(courses, weeks, break_weeks)` — distributes deliverable prep hours across weeks before due date
-- [ ] Implement `compute_available_hours(commitments) -> float` — calculates weekly available hours (168 - sleep*7 - locked hours)
-- [ ] Implement `detect_collisions(courses, weeks)` — flags weeks with deliverables from 2+ courses
-- [ ] Implement `check_recovery_floor(weeks, commitments) -> bool` — returns True if floor is breached
-- [ ] Implement `compute_capacity(courses, commitments, break_weeks, semester_start, semester_end) -> AnalysisResult` — orchestrates all above, returns complete week-by-week breakdown
-- [ ] Implement feasibility verdict logic: not_feasible (floor breached or >3 over-capacity weeks), tight (1-3 over-capacity), feasible (0 over-capacity)
+- [x] Implement `generate_weeks(semester_start: date, num_weeks: int) -> list[Week]` — creates week objects with start dates
+- [x] Implement `spread_prep_hours(courses, weeks, break_weeks)` — distributes deliverable prep hours across weeks before due date
+- [x] Implement `compute_available_hours(commitments) -> float` — calculates weekly available hours (168 - sleep*7 - locked hours)
+- [x] Implement `detect_collisions(courses, weeks)` — flags weeks with deliverables from 2+ courses
+- [x] Implement `check_recovery_floor(weeks, commitments) -> bool` — returns True if floor is breached
+- [x] Implement `compute_capacity(courses, commitments, break_weeks, semester_start, semester_end) -> AnalysisResult` — orchestrates all above, returns complete week-by-week breakdown
+- [x] Implement feasibility verdict logic: not_feasible (floor breached or >3 over-capacity weeks), tight (1-3 over-capacity), feasible (0 over-capacity)
 
 **Acceptance Criterion:** Given sample courses with known deliverables and commitments, `compute_capacity` returns correct over-capacity flags, collision flags, and feasibility level. Break weeks show is_break=True with zero required hours.
 
