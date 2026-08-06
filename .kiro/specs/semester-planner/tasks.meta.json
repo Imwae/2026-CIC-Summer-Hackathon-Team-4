@@ -1,527 +1,76 @@
 {
   "pbtResults": {},
   "executionHistory": {
-    "Create `Deliverable` model (name, type, due_date, week_number, weight_percent, estimated_prep_weeks, estimated_hours_total)": [
+    "Create file upload zone (drag-drop area + file input for PDFs)": [
       {
-        "executionId": "d5a744c2-770b-41fe-8919-e5b5bb50e3d2",
-        "chatSessionId": "sess_7e434143-3064-41d0-9fd6-91260ddca25d",
-        "timestamp": 1786039819708
+        "executionId": "bb43eb4c-1e1c-47ad-884a-23f84f05f861",
+        "chatSessionId": "sess_4cd58ecf-d7f8-4688-9bda-87b6b09447eb",
+        "timestamp": 1786045742659
       },
       {
-        "executionId": "d5a744c2-770b-41fe-8919-e5b5bb50e3d2",
-        "chatSessionId": "sess_7e434143-3064-41d0-9fd6-91260ddca25d",
-        "timestamp": 1786040072944
+        "executionId": "bb43eb4c-1e1c-47ad-884a-23f84f05f861",
+        "chatSessionId": "sess_4cd58ecf-d7f8-4688-9bda-87b6b09447eb",
+        "timestamp": 1786046029362
       }
     ],
-    "Create `ExtractionRequest` model (course_text, file_name)": [
+    "Create text paste input (textarea with submit button per course)": [
       {
-        "executionId": "634aac52-97d5-480a-bc51-6b2860e10912",
-        "chatSessionId": "sess_a04bd32b-8b55-47cf-ac52-7ad29e29852a",
-        "timestamp": 1786040103244
+        "executionId": "3b54e09a-edbe-42fb-9fcd-95548279e4c4",
+        "chatSessionId": "sess_61ae2576-e631-4e55-aaf0-f85b6f73d0b1",
+        "timestamp": 1786046043352
       },
       {
-        "executionId": "634aac52-97d5-480a-bc51-6b2860e10912",
-        "chatSessionId": "sess_a04bd32b-8b55-47cf-ac52-7ad29e29852a",
-        "timestamp": 1786040195498
+        "executionId": "3b54e09a-edbe-42fb-9fcd-95548279e4c4",
+        "chatSessionId": "sess_61ae2576-e631-4e55-aaf0-f85b6f73d0b1",
+        "timestamp": 1786046159602
       }
     ],
-    "Create `ExtractionResponse` model (status, course_code, course_name, deliverables[], error_message)": [
+    "Display per-file extraction status cards (pending, extracting spinner, success with item count, failure with retry)": [
       {
-        "executionId": "bf2edaec-3011-48cb-9861-ccfd845a3601",
-        "chatSessionId": "sess_c128a9bf-e462-4a87-ae50-9638526557d5",
-        "timestamp": 1786040214495
+        "executionId": "d2c40a3e-df87-4ce4-835b-e9a2a9a10064",
+        "chatSessionId": "sess_c5bec4e6-78ce-4cb2-88a3-a047552fc6db",
+        "timestamp": 1786046185694
       },
       {
-        "executionId": "bf2edaec-3011-48cb-9861-ccfd845a3601",
-        "chatSessionId": "sess_c128a9bf-e462-4a87-ae50-9638526557d5",
-        "timestamp": 1786040306001
+        "executionId": "d2c40a3e-df87-4ce4-835b-e9a2a9a10064",
+        "chatSessionId": "sess_c5bec4e6-78ce-4cb2-88a3-a047552fc6db",
+        "timestamp": 1786046289455
       }
     ],
-    "Create `Commitment` model (name, category, hours_per_week, locked)": [
+    "On successful extraction, display deliverable table with editable prep-week fields": [
       {
-        "executionId": "7e8869ef-6ca7-4d78-81de-96ad8e666494",
-        "chatSessionId": "sess_20cb5056-a985-4ad5-9306-4fec509fd529",
-        "timestamp": 1786040329876
+        "executionId": "1ec56cdc-ac80-4708-a113-40ffff5d83cb",
+        "chatSessionId": "sess_bc55e486-b7dd-49c2-a51a-da3dabd1e6f0",
+        "timestamp": 1786046304828
       },
       {
-        "executionId": "7e8869ef-6ca7-4d78-81de-96ad8e666494",
-        "chatSessionId": "sess_20cb5056-a985-4ad5-9306-4fec509fd529",
-        "timestamp": 1786040426823
+        "executionId": "1ec56cdc-ac80-4708-a113-40ffff5d83cb",
+        "chatSessionId": "sess_bc55e486-b7dd-49c2-a51a-da3dabd1e6f0",
+        "timestamp": 1786046444428
       }
     ],
-    "Create `CommitmentParseRequest` model (text)": [
+    "On failure, show prompt to re-upload or paste text — without clearing other successful extractions": [
       {
-        "executionId": "91730347-0797-4bd8-8dde-5e022a6230b0",
-        "chatSessionId": "sess_1ae1f15c-7159-4476-a90a-f9b155b43ca3",
-        "timestamp": 1786040451111
+        "executionId": "93b43acf-cbdd-4f26-b9d9-934491fd7a76",
+        "chatSessionId": "sess_b584c29d-0547-471b-b4c2-85491b60bfb2",
+        "timestamp": 1786046458906
       },
       {
-        "executionId": "8a54b6c4-2e0b-4b72-bcc3-9e595f4406be",
-        "chatSessionId": "sess_58be5479-816c-4e5b-929c-73b640365c5e",
-        "timestamp": 1786042159629
+        "executionId": "93b43acf-cbdd-4f26-b9d9-934491fd7a76",
+        "chatSessionId": "sess_b584c29d-0547-471b-b4c2-85491b60bfb2",
+        "timestamp": 1786046596564
+      }
+    ],
+    "Integrate with `api.js` extract endpoint": [
+      {
+        "executionId": "f76b64a1-adbb-476b-ab56-39707e13f229",
+        "chatSessionId": "sess_d42c4d5d-956f-4fbe-9ec8-9331d0f53684",
+        "timestamp": 1786046609081
       },
       {
-        "executionId": "8a54b6c4-2e0b-4b72-bcc3-9e595f4406be",
-        "chatSessionId": "sess_58be5479-816c-4e5b-929c-73b640365c5e",
-        "timestamp": 1786042189984
-      }
-    ],
-    "Create `CommitmentParseResponse` model (commitments[])": [
-      {
-        "executionId": "be409221-4d75-44cd-b25a-3972ff798c7d",
-        "chatSessionId": "sess_5ba4b7fe-bea0-4b5e-8491-232bd8891afd",
-        "timestamp": 1786040526469
-      },
-      {
-        "executionId": "be409221-4d75-44cd-b25a-3972ff798c7d",
-        "chatSessionId": "sess_5ba4b7fe-bea0-4b5e-8491-232bd8891afd",
-        "timestamp": 1786040639909
-      }
-    ],
-    "Create `CourseInput` model (course_code, course_name, deliverables[])": [
-      {
-        "executionId": "c4f2333c-f165-4fbb-aa93-959e420013a5",
-        "chatSessionId": "sess_c4ccccac-b270-496a-b414-4810e82b2d45",
-        "timestamp": 1786040652176
-      },
-      {
-        "executionId": "c4f2333c-f165-4fbb-aa93-959e420013a5",
-        "chatSessionId": "sess_c4ccccac-b270-496a-b414-4810e82b2d45",
-        "timestamp": 1786040861251
-      }
-    ],
-    "Create `AnalysisRequest` model (courses[], commitments[], break_weeks[], semester_start, semester_end)": [
-      {
-        "executionId": "07c7c6b8-382b-4ffd-bb0f-b2ab61178aec",
-        "chatSessionId": "sess_a9afba3f-ecb2-466b-bdc5-024738d81cd3",
-        "timestamp": 1786040886333
-      },
-      {
-        "executionId": "07c7c6b8-382b-4ffd-bb0f-b2ab61178aec",
-        "chatSessionId": "sess_a9afba3f-ecb2-466b-bdc5-024738d81cd3",
-        "timestamp": 1786041130850
-      }
-    ],
-    "Create `WeekResult` model (week_number, start_date, is_break, hours_required, hours_available, over_capacity, collision, deliverables_due[], prep_hours_by_course{})": [
-      {
-        "executionId": "13e70c2a-9c28-4ddd-9389-19bbafaf108f",
-        "chatSessionId": "sess_4426db05-a6ba-4974-acc5-4f7d0cce0484",
-        "timestamp": 1786041150677
-      },
-      {
-        "executionId": "13e70c2a-9c28-4ddd-9389-19bbafaf108f",
-        "chatSessionId": "sess_4426db05-a6ba-4974-acc5-4f7d0cce0484",
-        "timestamp": 1786041284144
-      }
-    ],
-    "Create `AnalysisResponse` model (feasible, feasibility_level, total_weeks, weeks[], critical_weeks[], collision_weeks[], recovery_floor_breached, verdict)": [
-      {
-        "executionId": "091aa0a3-16aa-4894-9b57-fe73b4a75222",
-        "chatSessionId": "sess_cfe49660-f4d4-470e-9109-ec56f42b4064",
-        "timestamp": 1786041307679
-      },
-      {
-        "executionId": "091aa0a3-16aa-4894-9b57-fe73b4a75222",
-        "chatSessionId": "sess_cfe49660-f4d4-470e-9109-ec56f42b4064",
-        "timestamp": 1786041535398
-      }
-    ],
-    "Create `Suggestion` model (description, target_commitment, action, detail, affected_weeks[])": [
-      {
-        "executionId": "127a5192-3ebd-4a4e-8031-375e3073ecc4",
-        "chatSessionId": "sess_c8f9815c-c07d-4794-a80a-9de9fc188bfd",
-        "timestamp": 1786041567990
-      },
-      {
-        "executionId": "127a5192-3ebd-4a4e-8031-375e3073ecc4",
-        "chatSessionId": "sess_c8f9815c-c07d-4794-a80a-9de9fc188bfd",
-        "timestamp": 1786041630448
-      }
-    ],
-    "Create `SuggestionRequest` model (analysis_result, commitments[])": [
-      {
-        "executionId": "753fe764-e8a0-44c2-a54c-db24aa52f905",
-        "chatSessionId": "sess_f9764324-9dc8-47d8-8a4a-e49b19ba41dc",
-        "timestamp": 1786041660600
-      },
-      {
-        "executionId": "753fe764-e8a0-44c2-a54c-db24aa52f905",
-        "chatSessionId": "sess_f9764324-9dc8-47d8-8a4a-e49b19ba41dc",
-        "timestamp": 1786041874219
-      }
-    ],
-    "Create `SuggestionResponse` model (suggestions[], locked_acknowledgment)": [
-      {
-        "executionId": "f16ca5f1-af7f-4c82-90e9-86834f7f5bc7",
-        "chatSessionId": "sess_b8b2a659-198f-4f49-b4bc-efb15b961f67",
-        "timestamp": 1786041895419
-      },
-      {
-        "executionId": "f16ca5f1-af7f-4c82-90e9-86834f7f5bc7",
-        "chatSessionId": "sess_b8b2a659-198f-4f49-b4bc-efb15b961f67",
-        "timestamp": 1786041970104
-      }
-    ],
-    "Create `ErrorResponse` model (error, message, code)": [
-      {
-        "executionId": "77f22743-8f4b-4e24-ae38-55258982c9f3",
-        "chatSessionId": "sess_05a98602-2c9e-4f29-8f8a-0277cb9962c9",
-        "timestamp": 1786041992607
-      },
-      {
-        "executionId": "77f22743-8f4b-4e24-ae38-55258982c9f3",
-        "chatSessionId": "sess_05a98602-2c9e-4f29-8f8a-0277cb9962c9",
-        "timestamp": 1786042072097
-      }
-    ],
-<<<<<<< HEAD
-    "Implement `generate_weeks(semester_start: date, num_weeks: int) -> list[Week]` — creates week objects with start dates": [
-      {
-        "executionId": "629730a0-71bf-4381-9668-727833390cd0",
-        "chatSessionId": "sess_4fd49c9f-b8ac-40c0-bebd-46ace5d8409f",
-        "timestamp": 1786042462052
-      },
-      {
-        "executionId": "629730a0-71bf-4381-9668-727833390cd0",
-        "chatSessionId": "sess_4fd49c9f-b8ac-40c0-bebd-46ace5d8409f",
-        "timestamp": 1786043255316
-      }
-    ],
-    "Implement `spread_prep_hours(courses, weeks, break_weeks)` — distributes deliverable prep hours across weeks before due date": [
-      {
-        "executionId": "c4268d18-6116-41bd-b1f4-cae2f1395c03",
-        "chatSessionId": "sess_7c281e9e-4418-4588-9842-2e2d515ed240",
-        "timestamp": 1786043270968
-      },
-      {
-        "executionId": "c4268d18-6116-41bd-b1f4-cae2f1395c03",
-        "chatSessionId": "sess_7c281e9e-4418-4588-9842-2e2d515ed240",
-        "timestamp": 1786043560654
-      }
-    ],
-    "Implement `compute_available_hours(commitments) -> float` — calculates weekly available hours (168 - sleep*7 - locked hours)": [
-      {
-        "executionId": "715a74da-0572-45e1-93a5-e0e335d024a6",
-        "chatSessionId": "sess_47484425-8921-4f7f-8019-5518311141db",
-        "timestamp": 1786043574857
-      },
-      {
-        "executionId": "715a74da-0572-45e1-93a5-e0e335d024a6",
-        "chatSessionId": "sess_47484425-8921-4f7f-8019-5518311141db",
-        "timestamp": 1786043699119
-      }
-    ],
-    "Implement `detect_collisions(courses, weeks)` — flags weeks with deliverables from 2+ courses": [
-      {
-        "executionId": "c9c7a833-68f5-478a-8bb0-1bf3cd4a38ef",
-        "chatSessionId": "sess_5ebf30a9-f38f-462b-8d33-f3d4fffecfa8",
-        "timestamp": 1786043710839
-      },
-      {
-        "executionId": "c9c7a833-68f5-478a-8bb0-1bf3cd4a38ef",
-        "chatSessionId": "sess_5ebf30a9-f38f-462b-8d33-f3d4fffecfa8",
-        "timestamp": 1786043904431
-      }
-    ],
-    "Implement `check_recovery_floor(weeks, commitments) -> bool` — returns True if floor is breached": [
-      {
-        "executionId": "693be995-eaf5-4a4f-9643-5b890f7831d5",
-        "chatSessionId": "sess_0749cfc3-035f-4e7a-8f33-1d485bea8dfd",
-        "timestamp": 1786043919320
-      },
-      {
-        "executionId": "693be995-eaf5-4a4f-9643-5b890f7831d5",
-        "chatSessionId": "sess_0749cfc3-035f-4e7a-8f33-1d485bea8dfd",
-        "timestamp": 1786044196692
-      }
-    ],
-    "Implement `compute_capacity(courses, commitments, break_weeks, semester_start, semester_end) -> AnalysisResult` — orchestrates all above, returns complete week-by-week breakdown": [
-      {
-        "executionId": "e4b35ddf-7f34-4d98-96c7-ea061cc65af3",
-        "chatSessionId": "sess_be55c161-8329-4a50-a2dd-76fdb0165a4f",
-        "timestamp": 1786044211026
-      },
-      {
-        "executionId": "5426398a-c5fe-402e-b51a-6f8548b8e2cd",
-        "chatSessionId": "sess_2f7c5d6f-55ce-4454-b07d-989f03a48491",
-        "timestamp": 1786044540068
-      },
-      {
-        "executionId": "5426398a-c5fe-402e-b51a-6f8548b8e2cd",
-        "chatSessionId": "sess_2f7c5d6f-55ce-4454-b07d-989f03a48491",
-        "timestamp": 1786044665055
-      }
-    ],
-    "Implement feasibility verdict logic: not_feasible (floor breached or >3 over-capacity weeks), tight (1-3 over-capacity), feasible (0 over-capacity)": [
-      {
-        "executionId": "c6d28db5-7c88-494c-9164-979409f4833e",
-        "chatSessionId": "sess_7c9e31b9-321a-4e60-b53d-4a26c5ec2ebf",
-        "timestamp": 1786044479950
-      },
-      {
-        "executionId": "c6d28db5-7c88-494c-9164-979409f4833e",
-        "chatSessionId": "sess_7c9e31b9-321a-4e60-b53d-4a26c5ec2ebf",
-        "timestamp": 1786044494192
-=======
-    "Define `EXTRACTION_PROMPT` template with placeholders for syllabus_text and schema": [
-      {
-        "executionId": "450d29ad-d513-46ee-a01b-62de29267b4d",
-        "chatSessionId": "sess_3ff7a10f-55df-4dcb-b31e-469a3da06389",
-        "timestamp": 1786042436244
-      },
-      {
-        "executionId": "450d29ad-d513-46ee-a01b-62de29267b4d",
-        "chatSessionId": "sess_3ff7a10f-55df-4dcb-b31e-469a3da06389",
-        "timestamp": 1786042534763
-      }
-    ],
-    "Define `ANALYSIS_PROMPT` template with placeholders for capacity_json": [
-      {
-        "executionId": "c0b03213-e544-4d54-9718-b25a61d24723",
-        "chatSessionId": "sess_fa44bd6f-0223-41d5-8b12-d629e6d2c209",
-        "timestamp": 1786042552294
-      },
-      {
-        "executionId": "c0b03213-e544-4d54-9718-b25a61d24723",
-        "chatSessionId": "sess_fa44bd6f-0223-41d5-8b12-d629e6d2c209",
-        "timestamp": 1786042610488
-      }
-    ],
-    "Define `SUGGESTION_PROMPT` template with placeholders for locked_list, over_capacity_weeks_data, unlocked_list, schema": [
-      {
-        "executionId": "2e5be9fb-ebf6-4ae1-9ee0-de60b52c6f56",
-        "chatSessionId": "sess_8cdafbc0-4c57-402e-9528-55f377e54d7c",
-        "timestamp": 1786042628725
-      },
-      {
-        "executionId": "2e5be9fb-ebf6-4ae1-9ee0-de60b52c6f56",
-        "chatSessionId": "sess_8cdafbc0-4c57-402e-9528-55f377e54d7c",
-        "timestamp": 1786042690213
-      }
-    ],
-    "Define `COMMITMENT_PARSE_PROMPT` template with placeholders for free_text and schema": [
-      {
-        "executionId": "ff6d8d80-0371-481b-91e2-e7f7a737eda0",
-        "chatSessionId": "sess_10dd978f-dad3-4419-9bb4-a2c9fabbe4c4",
-        "timestamp": 1786042709237
-      },
-      {
-        "executionId": "ff6d8d80-0371-481b-91e2-e7f7a737eda0",
-        "chatSessionId": "sess_10dd978f-dad3-4419-9bb4-a2c9fabbe4c4",
-        "timestamp": 1786042782479
-      }
-    ],
-    "Create boto3 Bedrock runtime client (sole boto3 importer in the project)": [
-      {
-        "executionId": "f5af184b-2647-4c14-8503-c200957cb572",
-        "chatSessionId": "sess_d942f9bc-f2f4-4326-b1ff-c0230f81ff59",
-        "timestamp": 1786042831416
-      },
-      {
-        "executionId": "f5af184b-2647-4c14-8503-c200957cb572",
-        "chatSessionId": "sess_d942f9bc-f2f4-4326-b1ff-c0230f81ff59",
-        "timestamp": 1786042922874
-      }
-    ],
-    "Implement `extract_syllabus(text: str) -> ExtractionResponse` — calls Bedrock with extraction prompt, parses JSON response": [
-      {
-        "executionId": "5b9a5016-8679-4abf-b8ac-125b8ec55755",
-        "chatSessionId": "sess_1ec5eebe-1d5f-4631-bad9-59fe34136e36",
-        "timestamp": 1786042941439
-      },
-      {
-        "executionId": "5b9a5016-8679-4abf-b8ac-125b8ec55755",
-        "chatSessionId": "sess_1ec5eebe-1d5f-4631-bad9-59fe34136e36",
-        "timestamp": 1786043012023
-      }
-    ],
-    "Implement `analyze_capacity(capacity_data: dict) -> str` — calls Bedrock with analysis prompt, returns narrative verdict": [
-      {
-        "executionId": "b9d63f3f-7b63-4194-933e-f40fb0f6aab2",
-        "chatSessionId": "sess_1436dbec-7ee2-4aba-9286-7ebc2094981f",
-        "timestamp": 1786043025840
-      },
-      {
-        "executionId": "b9d63f3f-7b63-4194-933e-f40fb0f6aab2",
-        "chatSessionId": "sess_1436dbec-7ee2-4aba-9286-7ebc2094981f",
-        "timestamp": 1786043111152
-      }
-    ],
-    "Implement `generate_suggestions(analysis_result: dict, commitments: list) -> SuggestionResponse` — calls Bedrock with suggestion prompt": [
-      {
-        "executionId": "367d4119-600c-4ba8-9c8c-6da5a47bfe45",
-        "chatSessionId": "sess_fedb4ffd-0f36-432b-89e3-5284444e62f8",
-        "timestamp": 1786043123716
-      },
-      {
-        "executionId": "367d4119-600c-4ba8-9c8c-6da5a47bfe45",
-        "chatSessionId": "sess_fedb4ffd-0f36-432b-89e3-5284444e62f8",
-        "timestamp": 1786043429200
-      }
-    ],
-    "Implement `parse_commitments(text: str) -> CommitmentParseResponse` — calls Bedrock with commitment parse prompt": [
-      {
-        "executionId": "a76d1333-8886-4da0-af21-9a165785cbe1",
-        "chatSessionId": "sess_60efeadd-9138-4883-97fe-fb054577cca2",
-        "timestamp": 1786043442878
-      }
-    ],
-    "Implement retry logic: on JSON parse failure, strip markdown fences and retry parse once": [
-      {
-        "executionId": "2b5739b5-6166-4dea-9a3a-6cd4dbdf904c",
-        "chatSessionId": "sess_2543295e-a214-43c4-83ba-a977ea3c34d4",
-        "timestamp": 1786043610935
-      },
-      {
-        "executionId": "2b5739b5-6166-4dea-9a3a-6cd4dbdf904c",
-        "chatSessionId": "sess_2543295e-a214-43c4-83ba-a977ea3c34d4",
-        "timestamp": 1786043626602
-      }
-    ],
-    "Implement error handling: catch ClientError, timeout, JSON errors → raise descriptive exceptions (never raw stack traces)": [
-      {
-        "executionId": "c0f3e67c-eb59-4dbc-a733-96a15c4d89cd",
-        "chatSessionId": "sess_f9611cfe-0ef5-4a6c-baf0-c0ec54c090b0",
-        "timestamp": 1786043640321
-      },
-      {
-        "executionId": "c0f3e67c-eb59-4dbc-a733-96a15c4d89cd",
-        "chatSessionId": "sess_f9611cfe-0ef5-4a6c-baf0-c0ec54c090b0",
-        "timestamp": 1786043812142
-      }
-    ],
-    "Create FastAPI app instance with CORS middleware (allow localhost:5173 in dev)": [
-      {
-        "executionId": "416f9d45-5b7a-4418-a133-881fbd56864d",
-        "chatSessionId": "sess_e1088d0c-137a-472e-b511-865ced696c74",
-        "timestamp": 1786043857165
-      },
-      {
-        "executionId": "416f9d45-5b7a-4418-a133-881fbd56864d",
-        "chatSessionId": "sess_e1088d0c-137a-472e-b511-865ced696c74",
-        "timestamp": 1786044000420
-      }
-    ],
-    "Implement `POST /api/extract` — accepts JSON (text paste) or multipart (PDF upload), calls extractor then bedrock_client, returns ExtractionResponse": [
-      {
-        "executionId": "08e59647-c31c-45b3-80e5-a15875d958e3",
-        "chatSessionId": "sess_597961b8-2265-4262-93bf-199c790face1",
-        "timestamp": 1786044012666
-      }
-    ],
-    "Implement `POST /api/commitments/parse` — accepts free-text, calls bedrock_client, returns CommitmentParseResponse": [
-      {
-        "executionId": "55808c3f-9c3c-4496-bb0a-611e721495d3",
-        "chatSessionId": "sess_e71dcd74-b8da-458f-9d02-1e868ea5f1c1",
-        "timestamp": 1786044122868
-      }
-    ],
-    "Implement `POST /api/analyze` — accepts AnalysisRequest, runs capacity.compute_capacity, calls bedrock_client for narrative, returns AnalysisResponse": [
-      {
-        "executionId": "4b522562-253f-425d-8421-e9473d128e43",
-        "chatSessionId": "sess_fd26b569-3e3e-46c1-9607-abfc6b685f3f",
-        "timestamp": 1786044219641
-      }
-    ],
-    "Implement `POST /api/suggest` — accepts SuggestionRequest, calls bedrock_client, returns SuggestionResponse": [
-      {
-        "executionId": "2e50fcd8-acd4-4e18-bbc1-56b6b2bb9946",
-        "chatSessionId": "sess_452aaf42-0222-47d7-947a-462dc8fece50",
-        "timestamp": 1786044244787
-      }
-    ],
-    "Implement global exception handler — catches all unhandled exceptions, returns ErrorResponse (never exposes stack traces)": [
-      {
-        "executionId": "308f1133-5a1a-4cb8-b0e8-5c74d1d7b4ae",
-        "chatSessionId": "sess_289e43c8-e49e-4a55-a21b-2f80b8a5fa70",
-        "timestamp": 1786044282620
-      }
-    ],
-    "Add static file serving for production (serve `frontend/dist/` at root)": [
-      {
-        "executionId": "60043ff8-a66d-4192-b6d4-adb1118d84ca",
-        "chatSessionId": "sess_12040428-aef2-4a0e-a060-48f7575e83f6",
-        "timestamp": 1786044308545
-      }
-    ],
-    "Initialize Vite React project in `frontend/` directory": [
-      {
-        "executionId": "ed031074-1e93-40f9-bf52-614b3aac6a13",
-        "chatSessionId": "sess_0e7d0f7c-4147-4432-b197-b742d3aaf605",
-        "timestamp": 1786044524639
-      },
-      {
-        "executionId": "ed031074-1e93-40f9-bf52-614b3aac6a13",
-        "chatSessionId": "sess_0e7d0f7c-4147-4432-b197-b742d3aaf605",
-        "timestamp": 1786044674485
-      }
-    ],
-    "Configure `vite.config.js` with proxy: `/api` → `http://localhost:8000`": [
-      {
-        "executionId": "85bf91e3-715a-4d9e-b03b-a5a6102527de",
-        "chatSessionId": "sess_d051cd59-d0f2-4866-8ed7-05bf8c50ee6a",
-        "timestamp": 1786044683469
-      },
-      {
-        "executionId": "85bf91e3-715a-4d9e-b03b-a5a6102527de",
-        "chatSessionId": "sess_d051cd59-d0f2-4866-8ed7-05bf8c50ee6a",
-        "timestamp": 1786044819029
-      }
-    ],
-    "Install dependencies: react, react-dom, chart.js, react-chartjs-2": [
-      {
-        "executionId": "1303a25f-ebb6-40f7-b52d-e9da0554f405",
-        "chatSessionId": "sess_89ff6a0c-e849-4d3f-a6ca-62c08f14f245",
-        "timestamp": 1786044829893
-      },
-      {
-        "executionId": "1303a25f-ebb6-40f7-b52d-e9da0554f405",
-        "chatSessionId": "sess_89ff6a0c-e849-4d3f-a6ca-62c08f14f245",
-        "timestamp": 1786044863745
-      }
-    ],
-    "Create `src/main.jsx` entry point": [
-      {
-        "executionId": "09d68efa-6b01-428a-a446-dccd2d04920d",
-        "chatSessionId": "sess_777f817f-732d-4132-8737-4befe6d72643",
-        "timestamp": 1786044876101
-      },
-      {
-        "executionId": "09d68efa-6b01-428a-a446-dccd2d04920d",
-        "chatSessionId": "sess_777f817f-732d-4132-8737-4befe6d72643",
-        "timestamp": 1786044994705
-      }
-    ],
-    "Create `src/App.jsx` with state management (useReducer) and phase tracking": [
-      {
-        "executionId": "a0601dd5-7346-4849-8bde-467f69c2b208",
-        "chatSessionId": "sess_fa150210-c111-42be-8861-b8bc0cb1f760",
-        "timestamp": 1786045007104
-      },
-      {
-        "executionId": "a0601dd5-7346-4849-8bde-467f69c2b208",
-        "chatSessionId": "sess_fa150210-c111-42be-8861-b8bc0cb1f760",
-        "timestamp": 1786045126355
-      }
-    ],
-    "Create `src/api.js` with fetch helpers for all 4 API endpoints (extract, parse, analyze, suggest)": [
-      {
-        "executionId": "a200f982-39c2-4161-9c91-8ce167c0e588",
-        "chatSessionId": "sess_8fe70760-a668-4f47-8ff7-652be09b2623",
-        "timestamp": 1786045137899
-      },
-      {
-        "executionId": "a200f982-39c2-4161-9c91-8ce167c0e588",
-        "chatSessionId": "sess_8fe70760-a668-4f47-8ff7-652be09b2623",
-        "timestamp": 1786045257692
-      }
-    ],
-    "Verify `npm run dev` starts successfully and proxies API calls": [
-      {
-        "executionId": "13f790ac-8eb5-406b-961d-23a1614af76f",
-        "chatSessionId": "sess_da67998a-b85f-4ce0-8788-e0330db704d3",
-        "timestamp": 1786045269123
->>>>>>> e3c1d6b67f10295d760a061a7b5d9209d7ae5eb5
+        "executionId": "f76b64a1-adbb-476b-ab56-39707e13f229",
+        "chatSessionId": "sess_d42c4d5d-956f-4fbe-9ec8-9331d0f53684",
+        "timestamp": 1786046702276
       }
     ]
   }

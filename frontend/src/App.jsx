@@ -17,6 +17,7 @@ const Actions = {
   ADD_COURSE: 'ADD_COURSE',
   UPDATE_COURSE_STATUS: 'UPDATE_COURSE_STATUS',
   SET_EXTRACTION_RESULT: 'SET_EXTRACTION_RESULT',
+  UPDATE_DELIVERABLE: 'UPDATE_DELIVERABLE',
   SET_COMMITMENTS: 'SET_COMMITMENTS',
   UPDATE_COMMITMENT: 'UPDATE_COMMITMENT',
   ADD_COMMITMENT: 'ADD_COMMITMENT',
@@ -104,6 +105,35 @@ function appReducer(state, action) {
             : course
         ),
       }
+
+    case Actions.UPDATE_DELIVERABLE: {
+      const { courseId, deliverableIndex, prepWeeks } = action.payload
+      return {
+        ...state,
+        courses: state.courses.map((course) => {
+          if (course.id !== courseId) return course
+          const deliverables = course.extractionResult.deliverables.map(
+            (d, idx) => {
+              if (idx !== deliverableIndex) return d
+              // Recalculate estimated_hours_total proportionally
+              const ratio = prepWeeks / (d.estimated_prep_weeks || 1)
+              return {
+                ...d,
+                estimated_prep_weeks: prepWeeks,
+                estimated_hours_total: Math.round(d.estimated_hours_total * ratio * 10) / 10,
+              }
+            }
+          )
+          return {
+            ...course,
+            extractionResult: {
+              ...course.extractionResult,
+              deliverables,
+            },
+          }
+        }),
+      }
+    }
 
     // --- Commitment management ---
     case Actions.SET_COMMITMENTS:

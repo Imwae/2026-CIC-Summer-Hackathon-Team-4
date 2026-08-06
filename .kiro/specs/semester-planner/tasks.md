@@ -145,12 +145,12 @@
 **Depends on:** Task 7
 
 ### Subtasks:
-- [ ] Create file upload zone (drag-drop area + file input for PDFs)
-- [ ] Create text paste input (textarea with submit button per course)
-- [ ] Display per-file extraction status cards (pending, extracting spinner, success with item count, failure with retry)
-- [ ] On successful extraction, display deliverable table with editable prep-week fields
-- [ ] On failure, show prompt to re-upload or paste text — without clearing other successful extractions
-- [ ] Integrate with `api.js` extract endpoint
+- [x] Create file upload zone (drag-drop area + file input for PDFs)
+- [x] Create text paste input (textarea with submit button per course)
+- [x] Display per-file extraction status cards (pending, extracting spinner, success with item count, failure with retry)
+- [x] On successful extraction, display deliverable table with editable prep-week fields
+- [x] On failure, show prompt to re-upload or paste text — without clearing other successful extractions
+- [x] Integrate with `api.js` extract endpoint
 
 **Acceptance Criterion:** A user can paste text and see extracted deliverables displayed in a table. A user can upload a PDF and see extraction status. Failed extractions show a retry prompt. Prep-week values are editable before analysis.
 
