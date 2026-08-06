@@ -33,10 +33,10 @@
 **Stories:** 1, 5, 7, 9
 
 ### Subtasks:
-- [ ] Define `EXTRACTION_PROMPT` template with placeholders for syllabus_text and schema
-- [ ] Define `ANALYSIS_PROMPT` template with placeholders for capacity_json
-- [ ] Define `SUGGESTION_PROMPT` template with placeholders for locked_list, over_capacity_weeks_data, unlocked_list, schema
-- [ ] Define `COMMITMENT_PARSE_PROMPT` template with placeholders for free_text and schema
+- [x] Define `EXTRACTION_PROMPT` template with placeholders for syllabus_text and schema
+- [x] Define `ANALYSIS_PROMPT` template with placeholders for capacity_json
+- [x] Define `SUGGESTION_PROMPT` template with placeholders for locked_list, over_capacity_weeks_data, unlocked_list, schema
+- [x] Define `COMMITMENT_PARSE_PROMPT` template with placeholders for free_text and schema
 
 **Acceptance Criterion:** Each prompt constant is a string with clearly marked placeholders. Formatting with `.format()` or f-string substitution produces a complete prompt with no missing variables.
 
@@ -50,13 +50,13 @@
 **Depends on:** Task 1, Task 2
 
 ### Subtasks:
-- [ ] Create boto3 Bedrock runtime client (sole boto3 importer in the project)
-- [ ] Implement `extract_syllabus(text: str) -> ExtractionResponse` — calls Bedrock with extraction prompt, parses JSON response
-- [ ] Implement `analyze_capacity(capacity_data: dict) -> str` — calls Bedrock with analysis prompt, returns narrative verdict
-- [ ] Implement `generate_suggestions(analysis_result: dict, commitments: list) -> SuggestionResponse` — calls Bedrock with suggestion prompt
-- [ ] Implement `parse_commitments(text: str) -> CommitmentParseResponse` — calls Bedrock with commitment parse prompt
-- [ ] Implement retry logic: on JSON parse failure, strip markdown fences and retry parse once
-- [ ] Implement error handling: catch ClientError, timeout, JSON errors → raise descriptive exceptions (never raw stack traces)
+- [x] Create boto3 Bedrock runtime client (sole boto3 importer in the project)
+- [x] Implement `extract_syllabus(text: str) -> ExtractionResponse` — calls Bedrock with extraction prompt, parses JSON response
+- [x] Implement `analyze_capacity(capacity_data: dict) -> str` — calls Bedrock with analysis prompt, returns narrative verdict
+- [x] Implement `generate_suggestions(analysis_result: dict, commitments: list) -> SuggestionResponse` — calls Bedrock with suggestion prompt
+- [x] Implement `parse_commitments(text: str) -> CommitmentParseResponse` — calls Bedrock with commitment parse prompt
+- [x] Implement retry logic: on JSON parse failure, strip markdown fences and retry parse once
+- [x] Implement error handling: catch ClientError, timeout, JSON errors → raise descriptive exceptions (never raw stack traces)
 
 **Acceptance Criterion:** Each function calls Bedrock, returns a validated Pydantic model on success, and raises a human-readable exception on failure. No AWS credentials are hardcoded.
 
@@ -106,7 +106,7 @@
 **Depends on:** Tasks 1, 3, 4, 5
 
 ### Subtasks:
-- [ ] Create FastAPI app instance with CORS middleware (allow localhost:5173 in dev)
+- [x] Create FastAPI app instance with CORS middleware (allow localhost:5173 in dev)
 - [ ] Implement `POST /api/extract` — accepts JSON (text paste) or multipart (PDF upload), calls extractor then bedrock_client, returns ExtractionResponse
 - [ ] Implement `POST /api/commitments/parse` — accepts free-text, calls bedrock_client, returns CommitmentParseResponse
 - [ ] Implement `POST /api/analyze` — accepts AnalysisRequest, runs capacity.compute_capacity, calls bedrock_client for narrative, returns AnalysisResponse
@@ -125,13 +125,13 @@
 **Stories:** All (frontend foundation)
 
 ### Subtasks:
-- [ ] Initialize Vite React project in `frontend/` directory
-- [ ] Configure `vite.config.js` with proxy: `/api` → `http://localhost:8000`
-- [ ] Install dependencies: react, react-dom, chart.js, react-chartjs-2
-- [ ] Create `src/main.jsx` entry point
-- [ ] Create `src/App.jsx` with state management (useReducer) and phase tracking
-- [ ] Create `src/api.js` with fetch helpers for all 4 API endpoints (extract, parse, analyze, suggest)
-- [ ] Verify `npm run dev` starts successfully and proxies API calls
+- [x] Initialize Vite React project in `frontend/` directory
+- [x] Configure `vite.config.js` with proxy: `/api` → `http://localhost:8000`
+- [x] Install dependencies: react, react-dom, chart.js, react-chartjs-2
+- [x] Create `src/main.jsx` entry point
+- [x] Create `src/App.jsx` with state management (useReducer) and phase tracking
+- [x] Create `src/api.js` with fetch helpers for all 4 API endpoints (extract, parse, analyze, suggest)
+- [x] Verify `npm run dev` starts successfully and proxies API calls
 
 **Acceptance Criterion:** `npm run dev` launches the Vite dev server. Navigating to localhost:5173 shows the app shell. API calls from `api.js` reach the backend via the proxy.
 
