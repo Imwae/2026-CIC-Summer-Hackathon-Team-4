@@ -238,12 +238,12 @@
 **Stories:** All
 
 ### Subtasks:
-- [ ] Create `backend/requirements.txt` with pinned versions (fastapi, uvicorn, pydantic, pypdf2, boto3, mangum)
-- [ ] Create `frontend/package.json` dependencies verified (react, react-dom, chart.js, react-chartjs-2, vite)
-- [ ] End-to-end test: paste sample syllabus → extract → enter commitments → analyze → view timeline → get suggestions
-- [ ] Verify error handling: submit invalid text → confirm user-friendly error message appears
-- [ ] Verify extraction gate: confirm "Run Analysis" is disabled until all extractions succeed
-- [ ] Verify recovery floor: create over-loaded schedule → confirm "not feasible" verdict appears
+- [x] Create `backend/requirements.txt` with pinned versions (fastapi, uvicorn, pydantic, pypdf2, boto3, mangum)
+- [x] Create `frontend/package.json` dependencies verified (react, react-dom, chart.js, react-chartjs-2, vite)
+- [x] End-to-end test: paste sample syllabus → extract → enter commitments → analyze → view timeline → get suggestions
+- [x] Verify error handling: submit invalid text → confirm user-friendly error message appears
+- [x] Verify extraction gate: confirm "Run Analysis" is disabled until all extractions succeed
+- [x] Verify recovery floor: create over-loaded schedule → confirm "not feasible" verdict appears
 
 **Acceptance Criterion:** The full app runs locally with two terminals (uvicorn + vite). A user can complete the entire flow from syllabus input to viewing suggestions. No unhandled stack traces appear in any error scenario.
 

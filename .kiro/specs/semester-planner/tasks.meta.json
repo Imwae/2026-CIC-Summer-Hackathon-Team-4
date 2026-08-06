@@ -60,6 +60,73 @@
         "chatSessionId": "sess_d06bacac-cb39-4648-ac82-6217f9f2dafb",
         "timestamp": 1786050007697
       }
+    ],
+    "Create `backend/requirements.txt` with pinned versions (fastapi, uvicorn, pydantic, pypdf2, boto3, mangum)": [
+      {
+        "executionId": "6b1d9419-eac5-4560-aa02-3a089a4540ab",
+        "chatSessionId": "sess_e5674573-6d8f-4ea6-9dd8-aec7f38677bd",
+        "timestamp": 1786050085047
+      },
+      {
+        "executionId": "6b1d9419-eac5-4560-aa02-3a089a4540ab",
+        "chatSessionId": "sess_e5674573-6d8f-4ea6-9dd8-aec7f38677bd",
+        "timestamp": 1786050132873
+      }
+    ],
+    "Create `frontend/package.json` dependencies verified (react, react-dom, chart.js, react-chartjs-2, vite)": [
+      {
+        "executionId": "2f9d5620-113e-4fce-8c3e-85803b170634",
+        "chatSessionId": "sess_961b4c51-4cf2-458f-8153-db40e8ce7514",
+        "timestamp": 1786050145390
+      },
+      {
+        "executionId": "2f9d5620-113e-4fce-8c3e-85803b170634",
+        "chatSessionId": "sess_961b4c51-4cf2-458f-8153-db40e8ce7514",
+        "timestamp": 1786050182822
+      }
+    ],
+    "End-to-end test: paste sample syllabus → extract → enter commitments → analyze → view timeline → get suggestions": [
+      {
+        "executionId": "76210eb7-2575-4c95-a9d7-444f7fced95a",
+        "chatSessionId": "sess_fe8a85c5-73fd-4a9e-958b-e267046dbc5a",
+        "timestamp": 1786050194390
+      },
+      {
+        "executionId": "76210eb7-2575-4c95-a9d7-444f7fced95a",
+        "chatSessionId": "sess_fe8a85c5-73fd-4a9e-958b-e267046dbc5a",
+        "timestamp": 1786050495066
+      }
+    ],
+    "Verify error handling: submit invalid text → confirm user-friendly error message appears": [
+      {
+        "executionId": "76032e3f-8991-4a2c-8e96-6f7d84c9342d",
+        "chatSessionId": "sess_b04aae08-6c55-43ed-a74c-5453b6891851",
+        "timestamp": 1786050507600
+      },
+      {
+        "executionId": "76032e3f-8991-4a2c-8e96-6f7d84c9342d",
+        "chatSessionId": "sess_b04aae08-6c55-43ed-a74c-5453b6891851",
+        "timestamp": 1786050778342
+      }
+    ],
+    "Verify extraction gate: confirm \"Run Analysis\" is disabled until all extractions succeed": [
+      {
+        "executionId": "85e8c222-7775-4402-8bd1-7d12dc4c8d39",
+        "chatSessionId": "sess_05b15107-a287-4e78-90db-eca45abdcaee",
+        "timestamp": 1786050791864
+      },
+      {
+        "executionId": "85e8c222-7775-4402-8bd1-7d12dc4c8d39",
+        "chatSessionId": "sess_05b15107-a287-4e78-90db-eca45abdcaee",
+        "timestamp": 1786050942691
+      }
+    ],
+    "Verify recovery floor: create over-loaded schedule → confirm \"not feasible\" verdict appears": [
+      {
+        "executionId": "0cb1cf8b-81ae-4d5f-aa53-73509c09f6a4",
+        "chatSessionId": "sess_389a1470-c7b3-49ba-a9cd-de26d27d2cb0",
+        "timestamp": 1786050955052
+      }
     ]
   }
 }
