@@ -134,4 +134,5 @@ class ErrorResponse(BaseModel):
         "SUGGESTION_FAILED",
         "PARSE_ERROR",
         "BEDROCK_TIMEOUT",
+        "INTERNAL_ERROR",
     ]

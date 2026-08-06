@@ -107,12 +107,12 @@
 
 ### Subtasks:
 - [x] Create FastAPI app instance with CORS middleware (allow localhost:5173 in dev)
-- [ ] Implement `POST /api/extract` — accepts JSON (text paste) or multipart (PDF upload), calls extractor then bedrock_client, returns ExtractionResponse
-- [ ] Implement `POST /api/commitments/parse` — accepts free-text, calls bedrock_client, returns CommitmentParseResponse
-- [ ] Implement `POST /api/analyze` — accepts AnalysisRequest, runs capacity.compute_capacity, calls bedrock_client for narrative, returns AnalysisResponse
-- [ ] Implement `POST /api/suggest` — accepts SuggestionRequest, calls bedrock_client, returns SuggestionResponse
-- [ ] Implement global exception handler — catches all unhandled exceptions, returns ErrorResponse (never exposes stack traces)
-- [ ] Add static file serving for production (serve `frontend/dist/` at root)
+- [x] Implement `POST /api/extract` — accepts JSON (text paste) or multipart (PDF upload), calls extractor then bedrock_client, returns ExtractionResponse
+- [x] Implement `POST /api/commitments/parse` — accepts free-text, calls bedrock_client, returns CommitmentParseResponse
+- [x] Implement `POST /api/analyze` — accepts AnalysisRequest, runs capacity.compute_capacity, calls bedrock_client for narrative, returns AnalysisResponse
+- [x] Implement `POST /api/suggest` — accepts SuggestionRequest, calls bedrock_client, returns SuggestionResponse
+- [x] Implement global exception handler — catches all unhandled exceptions, returns ErrorResponse (never exposes stack traces)
+- [x] Add static file serving for production (serve `frontend/dist/` at root)
 
 **Acceptance Criterion:** All four API endpoints respond with the correct JSON shape. Errors return `{ error: true, message, code }`. The server starts with `uvicorn backend.main:app` without errors.
 

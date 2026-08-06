@@ -108,6 +108,78 @@
         "chatSessionId": "sess_f335681f-c659-49a9-a2c1-5173bca452b9",
         "timestamp": 1786046214182
       }
+    ],
+    "Implement `POST /api/extract` — accepts JSON (text paste) or multipart (PDF upload), calls extractor then bedrock_client, returns ExtractionResponse": [
+      {
+        "executionId": "2920c347-c5e3-4413-9f5b-63d0e9d955fc",
+        "chatSessionId": "sess_e0f2814e-7cd3-43f4-9cb1-9fb61937e6ed",
+        "timestamp": 1786047108144
+      },
+      {
+        "executionId": "2920c347-c5e3-4413-9f5b-63d0e9d955fc",
+        "chatSessionId": "sess_e0f2814e-7cd3-43f4-9cb1-9fb61937e6ed",
+        "timestamp": 1786047190035
+      }
+    ],
+    "Implement `POST /api/commitments/parse` — accepts free-text, calls bedrock_client, returns CommitmentParseResponse": [
+      {
+        "executionId": "ed4dbc3e-c4ac-4245-94df-8b4016f7f1bc",
+        "chatSessionId": "sess_5f9c76df-df02-4a29-a4bf-5813ad2833a6",
+        "timestamp": 1786047202711
+      },
+      {
+        "executionId": "ed4dbc3e-c4ac-4245-94df-8b4016f7f1bc",
+        "chatSessionId": "sess_5f9c76df-df02-4a29-a4bf-5813ad2833a6",
+        "timestamp": 1786047298433
+      }
+    ],
+    "Implement `POST /api/analyze` — accepts AnalysisRequest, runs capacity.compute_capacity, calls bedrock_client for narrative, returns AnalysisResponse": [
+      {
+        "executionId": "509f9a55-f1ab-41a3-83c8-75157bb0b3bd",
+        "chatSessionId": "sess_e1d74c60-83aa-4d36-9e54-8170628eb12a",
+        "timestamp": 1786047314151
+      },
+      {
+        "executionId": "509f9a55-f1ab-41a3-83c8-75157bb0b3bd",
+        "chatSessionId": "sess_e1d74c60-83aa-4d36-9e54-8170628eb12a",
+        "timestamp": 1786047396369
+      }
+    ],
+    "Implement `POST /api/suggest` — accepts SuggestionRequest, calls bedrock_client, returns SuggestionResponse": [
+      {
+        "executionId": "e3887143-058d-4288-a544-a0fcd97bc5c3",
+        "chatSessionId": "sess_1f954496-68b1-444f-a290-cee493f35c44",
+        "timestamp": 1786047408544
+      },
+      {
+        "executionId": "e3887143-058d-4288-a544-a0fcd97bc5c3",
+        "chatSessionId": "sess_1f954496-68b1-444f-a290-cee493f35c44",
+        "timestamp": 1786047497865
+      }
+    ],
+    "Implement global exception handler — catches all unhandled exceptions, returns ErrorResponse (never exposes stack traces)": [
+      {
+        "executionId": "2f8b4ab7-de43-45c3-b811-ebc07f359356",
+        "chatSessionId": "sess_ed046bd7-5794-4dfa-91b2-57286fff4476",
+        "timestamp": 1786047512835
+      },
+      {
+        "executionId": "2f8b4ab7-de43-45c3-b811-ebc07f359356",
+        "chatSessionId": "sess_ed046bd7-5794-4dfa-91b2-57286fff4476",
+        "timestamp": 1786047772284
+      }
+    ],
+    "Add static file serving for production (serve `frontend/dist/` at root)": [
+      {
+        "executionId": "c3fc9e94-d722-418d-8187-3de3e168c6ea",
+        "chatSessionId": "sess_d301f9ab-e803-4167-a177-fdc7ccd40c42",
+        "timestamp": 1786047790467
+      },
+      {
+        "executionId": "c3fc9e94-d722-418d-8187-3de3e168c6ea",
+        "chatSessionId": "sess_d301f9ab-e803-4167-a177-fdc7ccd40c42",
+        "timestamp": 1786047884861
+      }
     ]
   }
 }
