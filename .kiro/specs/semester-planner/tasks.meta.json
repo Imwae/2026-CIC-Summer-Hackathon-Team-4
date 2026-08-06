@@ -36,6 +36,102 @@
         "chatSessionId": "sess_f335681f-c659-49a9-a2c1-5173bca452b9",
         "timestamp": 1786046214182
       }
+    ],
+    "Implement `Timeline.jsx` with Chart.js stacked bar chart (weeks on x-axis, hours on y-axis)": [
+      {
+        "executionId": "d7ef5ba9-293b-4a27-9f23-ceec7edd88f9",
+        "chatSessionId": "sess_998c54ab-f7f6-4e9b-b6f2-23b847d3e227",
+        "timestamp": 1786046566713
+      },
+      {
+        "executionId": "d7ef5ba9-293b-4a27-9f23-ceec7edd88f9",
+        "chatSessionId": "sess_998c54ab-f7f6-4e9b-b6f2-23b847d3e227",
+        "timestamp": 1786047226560
+      }
+    ],
+    "Color-code stacked bars by course (prep hours) + commitments": [
+      {
+        "executionId": "0b77b6b6-b023-408c-9a8e-215109934723",
+        "chatSessionId": "sess_81dc14c8-de09-407b-b956-490899a65409",
+        "timestamp": 1786047243218
+      },
+      {
+        "executionId": "0b77b6b6-b023-408c-9a8e-215109934723",
+        "chatSessionId": "sess_81dc14c8-de09-407b-b956-490899a65409",
+        "timestamp": 1786047497934
+      }
+    ],
+    "Highlight over-capacity weeks with red background/border": [
+      {
+        "executionId": "2b7fb387-9dab-46b7-80a5-ba56eee10681",
+        "chatSessionId": "sess_675813ca-9f11-4316-8bed-40b8ca341106",
+        "timestamp": 1786047511060
+      },
+      {
+        "executionId": "2b7fb387-9dab-46b7-80a5-ba56eee10681",
+        "chatSessionId": "sess_675813ca-9f11-4316-8bed-40b8ca341106",
+        "timestamp": 1786047558387
+      }
+    ],
+    "Mark collision weeks with warning indicator": [
+      {
+        "executionId": "1f6b9ea8-929f-4dd3-8aee-c7bb8e8f409d",
+        "chatSessionId": "sess_329b0a7e-9f13-4c19-9da2-769203b25445",
+        "timestamp": 1786047570670
+      },
+      {
+        "executionId": "1f6b9ea8-929f-4dd3-8aee-c7bb8e8f409d",
+        "chatSessionId": "sess_329b0a7e-9f13-4c19-9da2-769203b25445",
+        "timestamp": 1786047586109
+      }
+    ],
+    "Gray out break weeks": [
+      {
+        "executionId": "8e4fc538-7925-4f1a-b1cd-c02ae32573a2",
+        "chatSessionId": "sess_2e53f72a-c9f0-4599-9fdc-75980aa23e63",
+        "timestamp": 1786047597885
+      },
+      {
+        "executionId": "8e4fc538-7925-4f1a-b1cd-c02ae32573a2",
+        "chatSessionId": "sess_2e53f72a-c9f0-4599-9fdc-75980aa23e63",
+        "timestamp": 1786047696564
+      }
+    ],
+    "Implement `Breakdown.jsx` with Chart.js doughnut/pie chart": [
+      {
+        "executionId": "bd5b0be4-330b-4aa2-892a-83c06b8ec2d4",
+        "chatSessionId": "sess_ceb5745e-556a-4964-ab8c-1241403f15af",
+        "timestamp": 1786047708679
+      },
+      {
+        "executionId": "bd5b0be4-330b-4aa2-892a-83c06b8ec2d4",
+        "chatSessionId": "sess_ceb5745e-556a-4964-ab8c-1241403f15af",
+        "timestamp": 1786047841476
+      }
+    ],
+    "Show each commitment as proportional slice with label + percentage": [
+      {
+        "executionId": "51b8bf42-e3c4-46b8-9eae-46ab7c9632ae",
+        "chatSessionId": "sess_80996f6c-cc19-4bfe-bc3d-fa4e16c2a2ef",
+        "timestamp": 1786047854076
+      },
+      {
+        "executionId": "51b8bf42-e3c4-46b8-9eae-46ab7c9632ae",
+        "chatSessionId": "sess_80996f6c-cc19-4bfe-bc3d-fa4e16c2a2ef",
+        "timestamp": 1786048019931
+      }
+    ],
+    "Visually distinguish locked vs unlocked commitments (border style or pattern)": [
+      {
+        "executionId": "28d7f13c-466a-41fc-ba2c-5adb00215737",
+        "chatSessionId": "sess_a584d6ef-92db-4848-9aa6-4b8eb676e98f",
+        "timestamp": 1786048032665
+      },
+      {
+        "executionId": "28d7f13c-466a-41fc-ba2c-5adb00215737",
+        "chatSessionId": "sess_a584d6ef-92db-4848-9aa6-4b8eb676e98f",
+        "timestamp": 1786048145138
+      }
     ]
   }
 }

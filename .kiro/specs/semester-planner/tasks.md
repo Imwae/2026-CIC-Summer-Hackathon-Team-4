@@ -184,14 +184,14 @@
 **Depends on:** Task 7
 
 ### Subtasks:
-- [ ] Implement `Timeline.jsx` with Chart.js stacked bar chart (weeks on x-axis, hours on y-axis)
-- [ ] Color-code stacked bars by course (prep hours) + commitments
-- [ ] Highlight over-capacity weeks with red background/border
-- [ ] Mark collision weeks with warning indicator
-- [ ] Gray out break weeks
-- [ ] Implement `Breakdown.jsx` with Chart.js doughnut/pie chart
-- [ ] Show each commitment as proportional slice with label + percentage
-- [ ] Visually distinguish locked vs unlocked commitments (border style or pattern)
+- [x] Implement `Timeline.jsx` with Chart.js stacked bar chart (weeks on x-axis, hours on y-axis)
+- [x] Color-code stacked bars by course (prep hours) + commitments
+- [x] Highlight over-capacity weeks with red background/border
+- [x] Mark collision weeks with warning indicator
+- [x] Gray out break weeks
+- [x] Implement `Breakdown.jsx` with Chart.js doughnut/pie chart
+- [x] Show each commitment as proportional slice with label + percentage
+- [x] Visually distinguish locked vs unlocked commitments (border style or pattern)
 
 **Acceptance Criterion:** Given an AnalysisResponse, the Timeline renders a stacked bar chart with visible red highlighting on over-capacity weeks and collision indicators. The Breakdown renders a pie chart with labeled slices totaling 100%.
 
