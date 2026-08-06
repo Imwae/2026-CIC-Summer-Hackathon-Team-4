@@ -33,10 +33,10 @@
 **Stories:** 1, 5, 7, 9
 
 ### Subtasks:
-- [ ] Define `EXTRACTION_PROMPT` template with placeholders for syllabus_text and schema
-- [ ] Define `ANALYSIS_PROMPT` template with placeholders for capacity_json
-- [ ] Define `SUGGESTION_PROMPT` template with placeholders for locked_list, over_capacity_weeks_data, unlocked_list, schema
-- [ ] Define `COMMITMENT_PARSE_PROMPT` template with placeholders for free_text and schema
+- [x] Define `EXTRACTION_PROMPT` template with placeholders for syllabus_text and schema
+- [x] Define `ANALYSIS_PROMPT` template with placeholders for capacity_json
+- [x] Define `SUGGESTION_PROMPT` template with placeholders for locked_list, over_capacity_weeks_data, unlocked_list, schema
+- [x] Define `COMMITMENT_PARSE_PROMPT` template with placeholders for free_text and schema
 
 **Acceptance Criterion:** Each prompt constant is a string with clearly marked placeholders. Formatting with `.format()` or f-string substitution produces a complete prompt with no missing variables.
 
